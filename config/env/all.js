@@ -3,8 +3,8 @@
 module.exports = {
 	app: {
 		title: 'carsbikesbbq-site',
-		description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
-		keywords: 'MongoDB, Express, AngularJS, Node.js'
+		description: 'Walmart Annual Cars Bikes and BBQ show!',
+		keywords: 'Car Bikes BBQ'
 	},
 	port: process.env.PORT || 3000,
 	templateEngine: 'swig',

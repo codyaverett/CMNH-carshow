@@ -40,6 +40,10 @@ angular.module('users').config(['$stateProvider',
 		state('reset', {
 			url: '/password/reset/:token',
 			templateUrl: 'modules/users/views/password/reset-password.client.view.html'
-		});
+		}).
+        state('register-vehicle', {
+            url: '/register-vehicle',
+            templateUrl: 'modules/users/views/carshow/register-vehicle.view.html'
+        });
 	}
 ]);

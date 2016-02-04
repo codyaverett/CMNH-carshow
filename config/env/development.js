@@ -1,13 +1,14 @@
 'use strict';
 
 module.exports = {
+    //Mongo Db connection string
 	db: 'mongodb://localhost/carsbikesbbq-site-dev',
 	app: {
 		title: 'carsbikesbbq-site - Development Environment'
 	},
 	facebook: {
-		clientID: process.env.FACEBOOK_ID || 'APP_ID',
-		clientSecret: process.env.FACEBOOK_SECRET || 'APP_SECRET',
+		clientID: process.env.FACEBOOK_ID || '890723007674646',
+		clientSecret: process.env.FACEBOOK_SECRET || '7b9853591623079fe663d183459be9df',
 		callbackURL: '/auth/facebook/callback'
 	},
 	twitter: {
