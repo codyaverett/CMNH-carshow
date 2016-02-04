@@ -7,8 +7,8 @@ module.exports = {
 		title: 'carsbikesbbq-site - Test Environment'
 	},
 	facebook: {
-		clientID: process.env.FACEBOOK_ID || 'APP_ID',
-		clientSecret: process.env.FACEBOOK_SECRET || 'APP_SECRET',
+		clientID: process.env.FACEBOOK_ID || '890723007674646',
+		clientSecret: process.env.FACEBOOK_SECRET || '7b9853591623079fe663d183459be9df',
 		callbackURL: '/auth/facebook/callback'
 	},
 	twitter: {
