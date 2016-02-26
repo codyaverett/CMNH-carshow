@@ -2,6 +2,13 @@
 	<div class="page-header">
 		<h1 data-ng-bind="vehicleRegistration.name"></h1>
 	</div>
+    
+    <!--You need to make this look good, dude-->
+    <div class="section-where-stuff-goes-TODO">
+        <h3> Outputing just object data because im lazy </h3>
+        <span > {{ vehicleRegistration }}</span>
+    </div>
+        
 	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == vehicleRegistration.user._id))">
 		<a class="btn btn-primary" href="/#!/vehicle-registrations/{{vehicleRegistration._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>

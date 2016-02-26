@@ -9,7 +9,13 @@ angular.module('vehicle-registrations').controller('VehicleRegistrationsControll
 		$scope.create = function() {
 			// Create new Vehicle registration object
 			var vehicleRegistration = new VehicleRegistrations ({
-				name: this.name
+				name: this.name,
+                type: this.type,
+                year: this.year,
+                make: this.make,
+                model: this.model,
+                mods: this.mods,
+                class: this.class
 			});
 
 			// Redirect after save
