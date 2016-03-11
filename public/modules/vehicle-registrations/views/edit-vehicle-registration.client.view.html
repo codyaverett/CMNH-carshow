@@ -1,83 +1,107 @@
 <section data-ng-controller="VehicleRegistrationsController" data-ng-init="findOne()">
-    <div class="page-header">
+    <!--div class="page-header">
         <h1>Edit Vehicle registration</h1>
-    </div>
-    <div class="col-md-12">
-        <form class="form-horizontal" data-ng-submit="update()" novalidate>
-            <fieldset>
-                <div class="form-group">
-                    <label class="control-label" for="name">Name</label>
-                    <div class="controls">
-                        <input type="text" data-ng-model="vehicleRegistration.name" id="name" class="form-control" placeholder="Name" required>
-                    </div>
-                    </div>
-                    <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="InputVehicleType">Vehicle Type</label>
-                            <input type="text" class="form-control" id="InputVehicleType" data-ng-model="vehicleRegistration.type" placeholder="Vehicle Type">
+    </div-->
+    <!-- Edit Registration Section
+    ==========================================-->  
+    <div id="tf-contact" class="text-center">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+
+                    <div class="section-title center">
+                        <h2><strong>Edit Vehicle registration</strong></h2>
+                        <div class="line">
+                            <hr>
                         </div>
+                        <div class="clearfix"></div>
+                        <small><em>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</em></small>            
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="InputVehicleYear">Vehicle Year</label>
-                            <input type="text" class="form-control" id="InputVehicleYear" data-ng-model="vehicleRegistration.year" placeholder="Vehicle Year">
+
+                    <form data-ng-submit="update()" novalidate>
+		                <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" data-ng-model="vehicleRegistration.name" id="name" class="form-control" placeholder="Name" required>
+                                </div>
+                            </div>
+                            <!--div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="InputLastName">Last Name</label>
+                                    <input type="text" class="form-control" id="InputLastName" placeholder="Last Name">
+                                </div>
+                            </div-->
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="InputVehicleType">Vehicle Make</label>
-                            <input type="text" class="form-control" id="InputVehicleMake" data-ng-model="vehicleRegistration.make" placeholder="Vehicle Make">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="InputVehicleType">Vehicle Type</label>
+                                    <input type="text" class="form-control" id="InputVehicleType" data-ng-model="vehicleRegistration.type" placeholder="Vehicle Type">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="InputVehicleYear">Vehicle Year</label>
+                                    <input type="text" class="form-control" id="InputVehicleYear" data-ng-model="vehicleRegistration.year" placeholder="Vehicle Year">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="InputVehicleModel">Vehicle Model</label>
-                            <input type="text" class="form-control" id="InputVehicleModel" data-ng-model="vehicleRegistration.model" placeholder="Vehicle Model">
+		                <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="InputVehicleType">Vehicle Make</label>
+                                    <input type="text" class="form-control" id="InputVehicleMake" data-ng-model="vehicleRegistration.make" placeholder="Vehicle Make">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="InputVehicleModel">Vehicle Model</label>
+                                    <input type="text" class="form-control" id="InputVehicleModel" data-ng-model="vehicleRegistration.model" placeholder="Vehicle Model">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="InputVehicleMods">Vehicle Modifications</label>
-                            <input type="text" class="form-control" id="InputVehicleMods" data-ng-model="vehicleRegistration.mods" placeholder="Vehicle Modifications">
+		                <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="InputVehicleMods">Vehicle Modifications</label>
+                                    <input type="text" class="form-control" id="InputVehicleMods" data-ng-model="vehicleRegistration.mods" placeholder="Vehicle Modifications">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="InputEntryClass">Entry Class</label>
+                                       <select class="form-control">
+                                          <option></option>
+                                          <option>Class1</option>
+                                          <option>Class2</option>
+                                       </select>	
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="InputEntryClass">Entry Class</label>
-                                <select class="form-control">
-                                    <option>Class1</option>
-                                    <option>Class2</option>
-                                </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="checkbox">
-                    <label> 
-                        <input type="checkbox" data-ng-model="vehicleRegistration.previouslyParticipated" value"">Have you previously participated?
-                    </label>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
                         <div class="checkbox">
-                            <label>
-                                <input type="checkbox" data-ng-model="vehicleRegistration.postPictures" value"">Can we post photos of your vehicle?
+                            <label> 
+                                <input type="checkbox" data-ng-model="vehicleRegistration.previouslyParticipated" value"">Have you previously participated?
                             </label>
-                        </div>
-                    </div>
+                        </div>		
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="checkbox">
+                                   <label> 
+                                      <input type="checkbox" data-ng-model="vehicleRegistration.postPictures" value"">Can we post photos of your vehicle?
+                                   </label>
+                                </div>		
+                            </div>		
+                         </div>		
+                         <button type="submit" value="Update" class="btn tf-btn btn-default">Update</button>
+                         <div data-ng-show="error" class="text-danger">
+                            <strong data-ng-bind="error"></strong>
+                         </div>
+                    </form>
                 </div>
-                
-                <div class="form-group">
-                    <input type="submit" value="Update" class="btn btn-default">
-                </div>
-				<div data-ng-show="error" class="text-danger">
-					<strong data-ng-bind="error"></strong>
-				</div>
-            </fieldset>
-        </form>
-    </div>
+            </div>
+        </div>
+    </div> 
+    <!--End Edit Registration Form -->
 </section>
