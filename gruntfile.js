@@ -8,7 +8,8 @@ module.exports = function(grunt) {
 		clientViews: ['public/modules/**/views/**/*.html'],
 		clientJS: ['public/js/*.js', 'public/modules/**/*.js'],
 		clientCSS: ['public/modules/**/*.css'],
-		mochaTests: ['app/tests/**/*.js']
+		mochaTests: ['app/tests/**/*.js'],
+        css: [ 'public/modules/**/css/*.css', 'public/lib/fontawesome/css/font-awesome.min.css' ]
 	};
 
 	// Project Configuration
@@ -43,6 +44,13 @@ module.exports = function(grunt) {
 			},
 			clientCSS: {
 				files: watchFiles.clientCSS,
+				tasks: ['csslint'],
+				options: {
+					livereload: true
+				}
+			},
+            css: {
+				files: watchFiles.css,
 				tasks: ['csslint'],
 				options: {
 					livereload: true
