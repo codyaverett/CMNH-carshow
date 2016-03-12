@@ -2,6 +2,33 @@
 /*------------------------------------------------------------------
 [Custom Stylesheet]
 -------------------------------------------------------------------*/
+/* Section header */
+/*.section-title.center{
+	padding: 30px 0;
+}
+.section-title h2,
+.section-title.center h2{
+	font-weight: 300;
+}*/
+.section-title.center hr{
+	height: 3px;
+	/*width: 100%;*/
+	text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid rgba(0,125,128,0.5); /*#eee*/
+}
+
+/*.section-title.center hr {
+	border-top: 4px solid rgba(252, 172, 69, 0.34);
+	width: 40px;
+	text-align: center;
+	margin-top: 10px;
+	position: relative;
+	left: 17%;
+}*/
+
 /* Contact Section */
 #tf-contact{
 	padding: 80px 0;
@@ -39,7 +66,10 @@ label {
 }
 
 button.btn.tf-btn.btn-default {
-	float: right;
+	/*float: right;*/
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
 	/*background: #FCAC45;*/
     background: rgb(0,125,128);
 	border: 0;
