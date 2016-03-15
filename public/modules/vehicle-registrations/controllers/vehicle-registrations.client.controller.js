@@ -68,5 +68,26 @@ angular.module('vehicle-registrations').controller('VehicleRegistrationsControll
 				vehicleRegistrationId: $stateParams.vehicleRegistrationId
 			});
 		};
+        
+        /*$scope.finda = function() {
+            $scope.vehicleRegistration = VehicleRegistrations.find({
+                user : { $in: [$scope.authentication.user._id] }
+            });
+        }*/
+        
+        $scope.belongsToUser = function( ) {
+            
+            console.log($scope.authentication.user._id);
+            
+            if(Authentication.user._id == $scope.vehicleRegistration) {
+                console.log("they Match!!");
+            }
+            else {
+                console.log("nope");
+                return true;
+            }
+            
+            return true;
+        }
 	}
 ]);
