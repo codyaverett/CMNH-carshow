@@ -84,6 +84,18 @@ exports.list = function(req, res) {
 	});
 };
 
+exports.listPersonal = function(req, res) { 
+	VehicleRegistration.find().sort('-created').populate('user', 'displayName').exec(function(err, vehicleRegistrations) {
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+			res.jsonp(vehicleRegistrations);
+		}
+	});
+};
+
 /**
  * Vehicle registration middleware
  */

@@ -20,7 +20,7 @@ angular.module('vehicle-registrations').controller('VehicleRegistrationsControll
 
 			// Redirect after save
 			vehicleRegistration.$save(function(response) {
-				$location.path('vehicle-registrations/' + response._id);
+				$location.path('vehicle-registrations/');
 
 				// Clear form fields
 				$scope.name = '';

@@ -13,7 +13,10 @@
 			<h4 class="list-group-item-heading" data-ng-bind="vehicleRegistration.name"></h4>
         </a>
     </div>
-    <div class="alert alert-warning text-center" data-ng-hide="!vehicleRegistrations.$resolved || vehicleRegistrations.length">
+    <div class="alert alert-alert text-center" data-ng-hide="!vehicleRegistrations.$resolved || vehicleRegistrations.length">
     	No Vehicle registrations yet, why don't you <a href="/#!/vehicle-registrations/create">create one</a>?
+    </div>
+    <div class="alert text-center"" data-ng-show="vehicleRegistrations.$resolved || vehicleRegistrations.length">
+        <p><a href="#!/vehicle-registrations/create" class="link-button col-md-6 col-sm-6">Add a Vehicle!</a></p>
     </div>
 </section>
