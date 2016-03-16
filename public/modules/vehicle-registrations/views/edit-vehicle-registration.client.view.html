@@ -72,19 +72,45 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="InputEntryClass">Entry Class</label>
-                                       <select class="form-control" data-ng-model="vehicleRegistration.class">
-                                          <option></option>
-                                          <option>Class1</option>
-                                          <option>Class2</option>
-                                       </select>	
+                                       <select class="form-control">
+                                        <option>Car Original (1900-1970)</option>
+                                        <option>Car Original (1971-Present)</option>
+										<option>Car Modified (1900-1970)</option>
+                                        <option>Car Modified (1971-Present)</option>
+										<option>Truck Original (1900-1970)</option>
+                                        <option>Truck Original (1971-Present)</option>
+										<option>Truck Modified (1900-1970)</option>
+                                        <option>Truck Modified (1971-Present)</option>
+										<option>Foreign (1900-1980)</option>
+                                        <option>Foreign (1981-Present)</option>
+										<option>Mother's Only Car/Truck/SUV</option>
+										<option>Mopar</option>
+										<option>Camaro</option>
+										<option>Corvette</option>
+										<option>Mustang</option>
+										<option>Pontiac</option>
+										<option>Motorcycle Metric Touring</option>
+										<option>Motorcycle Metric Cruiser</option>
+										<option>Motorcycle American Touring</option>
+										<option>Motorcycle American Cruiser</option>
+										<option>Motorcycle Sport Bike</option>
+										<option>Motorcycle Custom Paint Class</option>
+										<option>Motorcycle Mother's Only</option>
+                                    </select>
+									<small><em>Original: only stock/OEM factory components</small></em><p>
+									<small><em>Modified: non-stock/after market items added to car</small></em>	
                                 </div>
                             </div>
                         </div>
-                        <div class="checkbox">
-                            <label> 
-                                <input type="checkbox" data-ng-model="vehicleRegistration.previouslyParticipated" value"">Have you previously participated?
-                            </label>
-                        </div>		
+						<div class=row>
+							<div class="col-md-12">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" data-ng-model="vehicleRegistration.previouslyParticipated" value "">Have you previously participated?
+									</label>
+								</div>
+							</div>
+						</div>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="checkbox">
