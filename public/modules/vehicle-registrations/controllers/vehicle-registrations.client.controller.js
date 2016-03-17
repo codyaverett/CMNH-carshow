@@ -51,7 +51,7 @@ angular.module('vehicle-registrations').controller('VehicleRegistrationsControll
 			var vehicleRegistration = $scope.vehicleRegistration;
 
 			vehicleRegistration.$update(function() {
-				$location.path('vehicle-registrations/' + vehicleRegistration._id);
+				$location.path('#!/vehicle-registrations/');
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});
@@ -60,34 +60,14 @@ angular.module('vehicle-registrations').controller('VehicleRegistrationsControll
 		// Find a list of Vehicle registrations
 		$scope.find = function() {
 			$scope.vehicleRegistrations = VehicleRegistrations.query();
-		};
+            console.log($scope.vehicleRegistrations);
+        };
 
 		// Find existing Vehicle registration
 		$scope.findOne = function() {
 			$scope.vehicleRegistration = VehicleRegistrations.get({ 
 				vehicleRegistrationId: $stateParams.vehicleRegistrationId
 			});
-		};
-        
-        /*$scope.finda = function() {
-            $scope.vehicleRegistration = VehicleRegistrations.find({
-                user : { $in: [$scope.authentication.user._id] }
-            });
-        }*/
-        
-        $scope.belongsToUser = function( ) {
-            
-            console.log($scope.authentication.user._id);
-            
-            if(Authentication.user._id == $scope.vehicleRegistration) {
-                console.log("they Match!!");
-            }
-            else {
-                console.log("nope");
-                return true;
-            }
-            
-            return true;
-        }
+		}
 	}
 ]);

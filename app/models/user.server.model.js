@@ -59,6 +59,12 @@ var UserSchema = new Schema({
 		default: '',
 		validate: [validateLocalStrategyPassword, 'Password should be longer']
 	},
+    previouslyParticipated: {
+        type: Boolean  
+    },
+    postPictures: {
+        type: Boolean  
+    },
 	salt: {
 		type: String
 	},
