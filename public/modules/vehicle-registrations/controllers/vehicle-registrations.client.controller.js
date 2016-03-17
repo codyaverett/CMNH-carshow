@@ -9,18 +9,18 @@ angular.module('vehicle-registrations').controller('VehicleRegistrationsControll
 		$scope.create = function() {
 			// Create new Vehicle registration object
 			var vehicleRegistration = new VehicleRegistrations ({
-				name: this.name,
-                type: this.type,
-                year: this.year,
-                make: this.make,
-                model: this.model,
-                mods: this.mods,
-                class: this.class
+				name: this.vehicleRegistration.name,
+                type: this.vehicleRegistration.type,
+                year: this.vehicleRegistration.year,
+                make: this.vehicleRegistration.make,
+                model: this.vehicleRegistration.model,
+                mods: this.vehicleRegistration.mods,
+                class: this.vehicleRegistration.class
 			});
 
 			// Redirect after save
 			vehicleRegistration.$save(function(response) {
-				$location.path('vehicle-registrations/');
+				$location.path('vehicle-registrations');
 
 				// Clear form fields
 				$scope.name = '';
@@ -51,7 +51,7 @@ angular.module('vehicle-registrations').controller('VehicleRegistrationsControll
 			var vehicleRegistration = $scope.vehicleRegistration;
 
 			vehicleRegistration.$update(function() {
-				$location.path('#!/vehicle-registrations/');
+				$location.path('vehicle-registrations');
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});

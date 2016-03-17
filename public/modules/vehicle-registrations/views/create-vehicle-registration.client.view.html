@@ -30,13 +30,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="InputVehicleType">Vehicle Type</label>
-                                    <input type="text" class="form-control" id="InputVehicleType" data-ng-model="vehicleRegistration.type" placeholder="Vehicle Type">
+                                    <input type="text" class="form-control" id="InputVehicleType" data-ng-model="vehicleRegistration.type" placeholder="Vehicle Type" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="InputVehicleYear">Vehicle Year</label>
-                                    <input type="text" class="form-control" id="InputVehicleYear" data-ng-model="vehicleRegistration.year" placeholder="Vehicle Year">
+                                    <input type="text" class="form-control" id="InputVehicleYear" data-ng-model="vehicleRegistration.year" placeholder="Vehicle Year" required>
                                 </div>
                             </div>
                         </div>
@@ -44,13 +44,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="InputVehicleType">Vehicle Make</label>
-                                    <input type="text" class="form-control" id="InputVehicleMake" data-ng-model="vehicleRegistration.make" placeholder="Vehicle Make">
+                                    <input type="text" class="form-control" id="InputVehicleMake" data-ng-model="vehicleRegistration.make" placeholder="Vehicle Make" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="InputVehicleModel">Vehicle Model</label>
-                                    <input type="text" class="form-control" id="InputVehicleModel" data-ng-model="vehicleRegistration.model" placeholder="Vehicle Model">
+                                    <input type="text" class="form-control" id="InputVehicleModel" data-ng-model="vehicleRegistration.model" placeholder="Vehicle Model" required>
                                 </div>
                             </div>
                         </div>
@@ -58,13 +58,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="InputVehicleMods">Vehicle Modifications</label>
-                                    <input type="text" class="form-control" id="InputVehicleMods" data-ng-model="vehicleRegistration.mods" placeholder="Vehicle Modifications">
+                                    <input type="text" class="form-control" id="InputVehicleMods" data-ng-model="vehicleRegistration.mods" placeholder="Vehicle Modifications" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="InputEntryClass">Entry Class</label>
-                                    <select class="form-control">
+                                    <select class="form-control" data-ng-model="vehicleRegistration.class" required>
                                         <option>Car Original (1900-1970)</option>
                                         <option>Car Original (1971-Present)</option>
 										<option>Car Modified (1900-1970)</option>
