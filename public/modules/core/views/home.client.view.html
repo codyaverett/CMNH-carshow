@@ -1,41 +1,7 @@
 <section data-ng-controller="HomeController">
     <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css">
     <div class="main" id="page-top">
-        <div class="row">
-            <div class="col-md-12 backg">
-                <div class="col-md-6 col-md-offset-3 inner col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
-                    <div class="text-box">
-                        <p class="intro">7th Annual</p>
-                        <h2>Cars, Bikes and BBQ</h2>
-                        <!--p>Date: Saturday, May 7th, 2016</p>
-                    <p>10am-3pm <span class="fa fa-circle"></span> David Glass Parking Lot <span class="fa fa-circle"></span> 702 Moberly Lane Bentonville, AR</p-->
-                        <h3>All proceeds benefitting Arkansas Children's Hospital</h3>
-                        
-                         <div ng-hide="authentication.user">
-                        
-                            <div class="row" style="padding-top: 10px;">
-                                <p><a href="#!/signup" class="link-button col-md-12 col-sm-12">Register Online</a></p>
-                            </div>
-                            
-                            <div class="row" style="margin: 10px;">
-                                <strong>OR</strong>                        
-                            </div>
-                            
-                            <div class="row" style="padding-bottom: 10px;">
-                                <p><a href="/modules/core/resources/CarShow_Registration.pdf" class="link-button col-md-12 col-sm-12">Print and Mail Registration</a></p>
-                            </div>
-                            
-                        </div>
-                   
-                        <div  ng-show="authentication.user">
-                            <p></br><a href="#!/vehicle-registrations" class="link-button col-md-12 col-sm-12">Your Vehicles</a></p>
-                            <p></br><a href="#!/vehicle-registrations/create" class="link-button col-md-12 col-sm-12">Add Vehicle</a></p>
-                        </div>
-                        <!--p><a href="#" class="link-button col-md-6 col-sm-6">Sign In</a></p-->
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <div class="container">
             <div class="col-md-12 some-notes row">
                 
@@ -43,40 +9,92 @@
                     <img src="modules/core/img/carshow_dash_plaque.png" style="width: 100%"></img>
                 </div>
                 
+                <hr>
+                
                 <div class="title">
-                    <h2>Welcome</h2>
+                    <h2>Welcome to the Car Show</h2>
                 </div>
                 <div class="desc">
+                    
+                    <p><Strong>All proceeds benefitting Arkansas Children's Hospital</Strong></p>
+                    
                     <p>Our rally is put together by Walmart Associate Volunteers to raise much needed funds for the Children's
                         Miracle Network Hospitals & Arkansas Children's Hospital. Our Associate Volunteers are dedicated
                         to helping children and helping you show off your cool rides. We've had tremendous success in the
                         past rallies because of our gracious partners, dedicated volunteers, and visiting patrons.</p>
                     
-                    </br>
+                        </br>
                     
                     <p>So whether you are a car fanatic, a bike rider by weekend, or just appreciate the glisten of 
                         freshly-polished chrome, we invite you to attend our event. Register your ride below. 
                         Hope to see you there!</p>
-
                 </div>
+                
                 <!--div class="featured-links padding-tb50">
-                    <a href="#" class="featured-link col-md-4 col-sm-4">
-                        <span>Interested in becoming a future event partner?</span>
-                        <strong>Find out how!</strong>
+                    <a href="#" class="featured-link col-md-6 col-sm-6">
+                        <span>Have a car to show off?</span>
+                        <strong>Register Online Now</strong>
                     </a>
-                    <!--a href="#" class="featured-link col-md-4 col-sm-4">
+                    <a href="#" class="featured-link col-md-6 col-sm-6">
                         <span>Become a volunteer</span>
                         <strong>Join us now</strong>
-                    </a-->
-                    <!--a href="#" class="featured-link col-md-4 col-sm-4">
+                    </a>
+                    <a href="#" class="featured-link col-md-6 col-sm-6">
                         <span>View our events</span>
                         <strong>Get involved</strong>
                     </a>
                 </div-->
-            </div>
-           
+                
+                
+                <div ng-hide="authentication.user">
+                
+                    <hr>
+                
+                    <div class="title">
+                        <h2>Register Now</h2>
+                    </div>
+                    <div class="desc">
+                        <p> In order to enter in the competition, you will need to register your vehicles.
+                            Pre-registering now and save 5 dollars at the register.</p>
+                            
+                            <div class="row" style="padding-top: 10px;">
+                                <a href="#!/signup" class="link-button text-center col-md-3 col-sm-3">Register Online</a>
+                            </div>
+                            
+                            <div class="row" style="margin: 10px;">
+                                <strong>OR</strong>                        
+                            </div>
+                            
+                            <div class="row" style="padding-bottom: 10px;">
+                                <a href="/modules/core/resources/CarShow_Registration.pdf" class="link-button col-md-4 col-sm-4">Print and Mail Registration</a>
+                            </div>
+                        
+                        <p></p>
+                    
+                    </div> 
+                
+                </div>
+                
+                <hr>
+                
+                <div class="title">
+                    <h2>Event Location</h2>
+                </div>
+                <div class="desc">
+                    <p>
+                    <a href="https://goo.gl/maps/MDDbjrZES4m">David Glass Technology Center Parking Lot </br>
+                    805 Moberly Lane</br>
+                    Bentonville, Arkansas</a>
+                    </p>
+                </div>
+                
+                <div  ng-show="authentication.user">
+                    <p></br><a href="#!/vehicle-registrations" class="link-button col-md-12 col-sm-12">View Your Registered Vehicles</a></p>
+                    <p></br><a href="#!/vehicle-registrations/create" class="link-button col-md-12 col-sm-12">Add a Vehicle</a></p>
+                </div>
             
             <div class="col-md-12 some-notes row">
+                <hr>
                 <div class="title">
                     <h2>Our Sponsors</h2>
                 </div>

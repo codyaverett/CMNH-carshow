@@ -31,7 +31,7 @@
 
 /* Contact Section */
 #tf-contact{
-	padding-top: 80px;
+	padding-top: 0px;
 }
 
 label {
@@ -270,25 +270,26 @@ button.btn.tf-btn.btn-default {
 	color: #8AB839;
 	font-size: 15px;
 }
-.text-box p a.link-button
+a.link-button
 {
 	text-decoration: none;
 	/*color: #8AB839;*/
     color: #fff;
 	border: #fff solid 1px;
+    text-align: center;
     /*border: #fa3447 solid 1px;*/
 	padding: 15px 22px;
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 	line-height: 1;
 	font-size: 18px;
 	font-weight: 400;
 	/*background: rgba(255, 255, 255, 0.1);*/
     /*background: rgb(26,117,B207);*/
-    background: rgb(0,125,128);
+    background: #1A468D;
 	transition: all 0.2s ease-in-out;
 	font-family: 'Poppins', sans-serif;
 }
-.text-box p a.link-button:hover
+a.link-button:hover
 {
 	background: #83D3C9;
     /*rgba(255, 255, 255, 0.3);*/
@@ -322,11 +323,11 @@ button.btn.tf-btn.btn-default {
 .desc p a
 {
 	text-decoration: none;
-	color: #8ab839;
+	color: #007dc6;
 }
 .features
 {
-	background: #8ab839;
+	background: #007dc6;
 	padding: 60px 0px;
 }
 .features-text
@@ -415,7 +416,7 @@ h2.features-text::after {
 }
 .btneff
 {
-	background-color: #8ab839;
+	background-color: #007dc6;
 border: none;
 color: #fff;
 padding: 13px 0px;
@@ -438,7 +439,7 @@ h2.portfolio-text::after {
     margin: 17px auto 0px;
     width: 80px;
     height: 1px;
-    background: #8ab839 none repeat scroll 0% 0%;
+    background: #007dc6 none repeat scroll 0% 0%;
     content: "";
 }
 .work-list a .featured-img
@@ -487,7 +488,7 @@ h2.portfolio-text::after {
     float: left;
     width: 100%;
     font-weight: 600;
-	background: #8ab839;
+	background: #007dc6;
 	color:#fff;
 	margin:0px;
 	font-family: 'Roboto', sans-serif;
@@ -538,14 +539,14 @@ h2.portfolio-text::after {
 .counter-item i
 {
 	font-size: 40px;
-	color: #8ab839;
+	color: #007dc6;
 }
 .timer
 {
 	margin-top: 5px;
 	font-weight: 700;
 	font-size: 50px;
-	color: #8ab839;
+	color: #007dc6;
 }
 .counter-item h5
 {
@@ -583,7 +584,7 @@ h2.portfolio-text::after {
 }
 .btn-sub {
     color: #fff;
-    background-color: #8AB839;
+    background-color: #007dc6;
     border-color: #fff;
     font-size: 18px;
     padding: 10px 30px;
@@ -598,7 +599,7 @@ input[placeholder], [placeholder], *[placeholder] {
 .address p i {
     padding-right: 10px;
     font-size: 15px;
-    color: #8AB839;
+    color: #007dc6;
 }
 .footer {
     margin: 20px 0px 10px;
@@ -612,7 +613,7 @@ input[placeholder], [placeholder], *[placeholder] {
 	font-family: 'Poppins', sans-serif;
 }
 .footer p a {
- color: #8AB839;
+ color: #007dc6;
  font-family: 'Poppins', sans-serif;
 }
 
@@ -778,4 +779,16 @@ nav#footer p{
 .navbar-inverse {
     background-color: #1A468D;
     background-image: "";
+}
+
+.custom-nav {
+    color: #FFF;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #FFF;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #FFF;
 }
