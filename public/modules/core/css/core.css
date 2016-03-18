@@ -295,7 +295,7 @@ button.btn.tf-btn.btn-default {
 }
 .some-notes
 {
-	padding: 40px 0px;
+	padding: 20px 0px;
 	float: left;
 }
 .title h2
@@ -304,7 +304,7 @@ button.btn.tf-btn.btn-default {
 	font-weight: 300;
 	font-size: 42px;
 	text-align: center;
-	color: #8AB839;
+	color: #1A468D;
 	text-transform: uppercase;
 }
 .desc p
@@ -766,11 +766,16 @@ nav#footer p{
 }*/
 /*.social-icons .fa-facebook,.fa-envelope,.social-icons .fa-facebook-square{background-color:#3C599F;}*/
 .fa-envelope, .fa-facebook{
- color:rgba(0,125,128,0.6);   
+ color: #1A468D;   
 }
 .list-inline li {
 	display: inline-block;
 	padding-right: 5px;
 	padding-left: 5px;
 	margin-bottom: 2px;
+}
+
+.navbar-inverse {
+    background-color: #1A468D;
+    background-image: "";
 }

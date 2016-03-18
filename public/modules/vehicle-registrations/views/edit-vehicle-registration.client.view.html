@@ -72,6 +72,11 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="InputEntryClass">Entry Class</label>
+                                        </br>
+                                    	<div class="alert alert-info">
+                                            Original: only stock/OEM factory components </br>
+									        Modified: non-stock/after market items added to car
+                                        </div>
                                        <select class="form-control" data-ng-model="vehicleRegistration.class">
                                         <option>Car Original (1900-1970)</option>
                                         <option>Car Original (1971-Present)</option>
@@ -98,13 +103,13 @@
 										<option>Motorcycle Custom Paint Class</option>
 										<option>Motorcycle Mother's Only</option>
                                     </select>
-									<small><em>Original: only stock/OEM factory components</small></em><p>
-									<small><em>Modified: non-stock/after market items added to car</small></em>	
                                 </div>
                             </div>
                         </div>
 
-                         <button type="submit" value="Update" class="btn tf-btn btn-default">Update</button>
+                        <button type="submit" value="Update" class="btn tf-btn btn-default">Update</button>
+                        <button href="vehicleregistrations" class="btn tf-btn btn-danger" data-ng-click="remove();" 
+                            data-ng-show="((authentication.user) && (authentication.user._id == vehicleRegistration.user._id))">Remove <span class="glyphicon glyphicon-trash"></span></button>
                          
                          <div data-ng-show="error" class="text-danger">
                             <strong data-ng-bind="error"></strong>

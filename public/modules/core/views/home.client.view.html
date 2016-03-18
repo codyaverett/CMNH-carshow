@@ -9,9 +9,23 @@
                         <h2>Cars, Bikes and BBQ</h2>
                         <!--p>Date: Saturday, May 7th, 2016</p>
                     <p>10am-3pm <span class="fa fa-circle"></span> David Glass Parking Lot <span class="fa fa-circle"></span> 702 Moberly Lane Bentonville, AR</p-->
-                        <h3>All proeeds benefitting Arkansas Children's Hospital</h3>
-                        </br>
-                        <p><a href="#!/signup" class="link-button col-md-12 col-sm-12" ng-hide="authentication.user">Register NOW for 5 dollars off!</a></p>
+                        <h3>All proceeds benefitting Arkansas Children's Hospital</h3>
+                        
+                         <div ng-hide="authentication.user">
+                        
+                            <div class="row" style="padding-top: 10px;">
+                                <p><a href="#!/signup" class="link-button col-md-12 col-sm-12">Register Online</a></p>
+                            </div>
+                            
+                            <div class="row" style="margin: 10px;">
+                                <strong>OR</strong>                        
+                            </div>
+                            
+                            <div class="row" style="padding-bottom: 10px;">
+                                <p><a href="/modules/core/resources/CarShow_Registration.pdf" class="link-button col-md-12 col-sm-12">Print and Mail Registration</a></p>
+                            </div>
+                            
+                        </div>
                    
                         <div  ng-show="authentication.user">
                             <p></br><a href="#!/vehicle-registrations" class="link-button col-md-12 col-sm-12">Your Vehicles</a></p>
@@ -24,6 +38,11 @@
         </div>
         <div class="container">
             <div class="col-md-12 some-notes row">
+                
+                <div class="logo">
+                    <img src="modules/core/img/carshow_dash_plaque.png" style="width: 100%"></img>
+                </div>
+                
                 <div class="title">
                     <h2>Welcome</h2>
                 </div>

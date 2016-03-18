@@ -69,5 +69,20 @@ angular.module('vehicle-registrations').controller('VehicleRegistrationsControll
 				vehicleRegistrationId: $stateParams.vehicleRegistrationId
 			});
 		}
+        
+        $scope.anyPersonalVehicles = function() {
+            
+            if(!$scope.vehicleRegistrations.$resolved || $scope.vehicleRegistrations.length) {
+                
+                for(var i = 0; i < $scope.vehicleRegistrations.length; i++) {
+                    if ($scope.authentication.user._id === $scope.vehicleRegistrations[i].user._id) {
+                        return true;
+                    }
+                } 
+            } else {
+                return false;
+            } 
+            
+        }
 	}
 ]);

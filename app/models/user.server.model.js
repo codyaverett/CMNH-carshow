@@ -59,6 +59,28 @@ var UserSchema = new Schema({
 		default: '',
 		validate: [validateLocalStrategyPassword, 'Password should be longer']
 	},
+      phoneNumber: {
+        type: String,
+        validate: {
+          validator: function(v) {
+            return /\d{3}-\d{3}-\d{4}/.test(v);
+          },
+          message: '{VALUE} is not a valid phone number!'
+        },
+        required: [true, 'User phone number required']
+    },
+    address: {
+        type: String,
+        required: 'Please enter your Street Address'
+    }, 
+    city: {
+        type: String,
+        required: 'Please enter your City'
+    },
+    zip: {
+        type: Number,
+        required: 'Please enter you Zip Code'
+    },
     previouslyParticipated: {
         type: Boolean  
     },

@@ -19,8 +19,8 @@
                                     <a data-ng-href="#!/vehicle-registrations/{{vehicleRegistration._id}}/edit"
                                         class="list-group-item" ng-show="authentication.user._id === vehicleRegistration.user._id">
                                         <small class="list-group-item-text">Posted on
-                                        <span data-ng-bind="vehicleRegistration.created | date:'medium'"></span> by
-                                        <span data-ng-bind="vehicleRegistration.user.displayName"></span>
+                                            <span data-ng-bind="vehicleRegistration.created | date:'medium'"></span> by
+                                            <span data-ng-bind="vehicleRegistration.user.displayName"></span>
                                         </small>
                                         <h4 class="list-group-item-heading" data-ng-bind="vehicleRegistration.name"></h4>
                                     </a>
@@ -28,10 +28,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="alert alert-alert text-center" data-ng-hide="!vehicleRegistrations.$resolved || vehicleRegistrations.length">
+                    <div class="alert alert-alert text-center" data-ng-hide="anyPersonalVehicles()"> <!--"!vehicleRegistrations.$resolved || vehicleRegistrations.length"-->
                         No Vehicle registrations yet, why don't you <a href="/#!/vehicle-registrations/create">create one</a>?
                     </div>
-                    <div class="row  data-ng-show=" vehicleRegistrations.$resolved || vehicleRegistrations.length ">
+                    <div class="row" data-ng-hide="!anyPersonalVehicles()">
                         <ul class="social-icons icon-circle icon-zoom list-inline ">
                             <li><p><a href="#!/vehicle-registrations/create">Add another Vehicle</a></p></li>                
                         </ul>

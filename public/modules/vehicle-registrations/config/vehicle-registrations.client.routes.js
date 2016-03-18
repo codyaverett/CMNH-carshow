@@ -13,10 +13,10 @@ angular.module('vehicle-registrations').config(['$stateProvider',
 			url: '/vehicle-registrations/create',
 			templateUrl: 'modules/vehicle-registrations/views/create-vehicle-registration.client.view.html'
 		}).
-		state('viewVehicleRegistration', {
+		/*state('viewVehicleRegistration', {
 			url: '/vehicle-registrations/:vehicleRegistrationId',
 			templateUrl: 'modules/vehicle-registrations/views/view-vehicle-registration.client.view.html'
-		}).
+		}).  */
 		state('editVehicleRegistration', {
 			url: '/vehicle-registrations/:vehicleRegistrationId/edit',
 			templateUrl: 'modules/vehicle-registrations/views/edit-vehicle-registration.client.view.html'

@@ -13,8 +13,7 @@
                             <hr>
                         </div>
                         <div class="clearfix"></div>
-                        <small class="alert alert-info">Add your Car or Motorcycle details so they are ready when you check in at the Event.</small>
-                        <p></br>
+                        <div class="alert alert-info">Add your Car or Motorcycle details so they are ready when you check in at the Event.</div>
                     </div>
 
                     <form data-ng-submit="create()">
@@ -36,7 +35,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="InputVehicleYear">Vehicle Year</label>
-                                    <input type="text" class="form-control" id="InputVehicleYear" data-ng-model="vehicleRegistration.year" placeholder="Vehicle Year" required>
+                                    <input type="number" class="form-control" id="InputVehicleYear" data-ng-model="vehicleRegistration.year" placeholder="Vehicle Year" required>
                                 </div>
                             </div>
                         </div>
@@ -64,6 +63,11 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="InputEntryClass">Entry Class</label>
+                                    </br>
+                                    <div class="alert alert-info">
+                                        Original: only stock/OEM factory components </br>
+                                        Modified: non-stock/after market items added to car
+                                    </div>
                                     <select class="form-control" data-ng-model="vehicleRegistration.class" required>
                                         <option>Car Original (1900-1970)</option>
                                         <option>Car Original (1971-Present)</option>
@@ -90,8 +94,6 @@
 										<option>Motorcycle Custom Paint Class</option>
 										<option>Motorcycle Mother's Only</option>
                                     </select>
-									<small><em>Original: only stock/OEM factory components</small></em><p>
-									<small><em>Modified: non-stock/after market items added to car</small></em>
                                 </div>
                             </div>
                         </div>
