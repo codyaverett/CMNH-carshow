@@ -24,7 +24,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input type="text" class="form-control" id="password" data-ng-model="credentials.password" placeholder="Password">
+                                    <input type="text" class="form-control" id="password" data-ng-model="credentials.password" placeholder="Password [At least 8 characters]">
                                 </div>
                             </div>
                         </div>
@@ -167,6 +167,8 @@
                         <!-- -->
                         <button type="submit" class="fancy-button">Sign up</button>&nbsp; or&nbsp;
                         <a href="/#!/signin" class="show-signup">Sign in</a>
+                        </br>
+                        </br>
                         <div data-ng-show="error" class="text-danger text-center">
                             <strong data-ng-bind="error"></strong>
                         </div>
