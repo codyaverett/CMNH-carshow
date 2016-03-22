@@ -2,9 +2,9 @@
 
 module.exports = {
     //Mongo Db connection string
-	db: 'mongodb://localhost/carsbikesbbq-site-dev',
+	db: 'mongodb://localhost/carsbikesbbq-prod',
 	app: {
-		title: 'carsbikesbbq-site - Development Environment'
+		title: 'Walmart Cars Bikes and BBQ'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || '890723007674646',
