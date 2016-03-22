@@ -17,7 +17,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
     border: 0;
-    border-top: 1px solid rgba(0,125,128,0.5); /*#eee*/
+    border-top: 1px solid rgba(0, 125, 198, 1); /*#eee*/
 }
 
 /*.section-title.center hr {
@@ -807,6 +807,14 @@ nav#footer p{
     color: #FFF;
 }
 
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+	background-color: #007dc6;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .active > a {
+	background-color: #007dc6;
+}
+
 .col-centered {
     float: none;
     margin: 0 auto;
@@ -848,6 +856,11 @@ nav#footer p{
     background: #FF3424;
 	transition: all 0.2s ease-in-out;
 	font-family: 'Poppins', sans-serif;
+}
+.fancy-button:hover {
+	background: #007dc6;
+	color: #fff;
+	text-decoration: none;
 }
 
 .center {
