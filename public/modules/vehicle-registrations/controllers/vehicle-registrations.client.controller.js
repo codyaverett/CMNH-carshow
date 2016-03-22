@@ -60,7 +60,6 @@ angular.module('vehicle-registrations').controller('VehicleRegistrationsControll
 		// Find a list of Vehicle registrations
 		$scope.find = function() {
 			$scope.vehicleRegistrations = VehicleRegistrations.query();
-            console.log($scope.vehicleRegistrations);
         };
 
 		// Find existing Vehicle registration

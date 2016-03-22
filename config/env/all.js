@@ -2,11 +2,11 @@
 
 module.exports = {
 	app: {
-		title: 'carsbikesbbq-site',
+		title: 'Walmart Cars Bikes and BBQ',
 		description: 'Walmart Annual Cars Bikes and BBQ show!',
 		keywords: 'Car Bikes BBQ'
 	},
-	port: process.env.PORT || 3000,
+	port: process.env.PORT || 80,
 	templateEngine: 'swig',
 	sessionSecret: 'MEAN',
 	sessionCollection: 'sessions',
