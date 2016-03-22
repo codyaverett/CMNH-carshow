@@ -81,6 +81,9 @@ var UserSchema = new Schema({
         type: Number,
         required: 'Please enter you Zip Code'
     },
+	clubAffiliation: {
+		type: String
+	},
     previouslyParticipated: {
         type: Boolean  
     },
