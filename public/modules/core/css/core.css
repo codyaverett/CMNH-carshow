@@ -29,6 +29,10 @@
 	left: 17%;
 }*/
 
+.logo {
+    width: 75%;
+}
+
 /* Contact Section */
 #tf-contact{
 	padding-top: 0px;
@@ -620,6 +624,11 @@ input[placeholder], [placeholder], *[placeholder] {
 
 @media (min-width: 380px) and (max-width: 768px)
 {
+    
+    .logo {
+        width: 80%;
+    }
+    
 	.text-box p.intro {
     font-size: 22px;
 	}
@@ -652,6 +661,11 @@ input[placeholder], [placeholder], *[placeholder] {
 }
 @media (min-width: 0px) and (max-width: 379px)
 {
+    
+    .logo {
+        width: 90%;
+    }
+    
 	.text-box p.intro {
     font-size: 22px;
 	}
@@ -792,3 +806,55 @@ nav#footer p{
 .navbar-inverse .navbar-brand {
     color: #FFF;
 }
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.fancy-button {
+    text-decoration: none;
+	/*color: #8AB839;*/
+    color: #fff;
+	border: #fff solid 1px;
+    text-align: center;
+    /*border: #fa3447 solid 1px;*/
+	padding: 15px 22px;
+	/*margin-top: 20px;*/
+	line-height: 1;
+	font-size: 18px;
+	font-weight: 400;
+	/*background: rgba(255, 255, 255, 0.1);*/
+    /*background: rgb(26,117,B207);*/
+    background: #1A468D;
+	transition: all 0.2s ease-in-out;
+	font-family: 'Poppins', sans-serif;
+}
+
+.fancy-button-red {
+    text-decoration: none;
+	/*color: #8AB839;*/
+    color: #fff;
+	border: #fff solid 1px;
+    text-align: center;
+    /*border: #fa3447 solid 1px;*/
+	padding: 15px 22px;
+	/*margin-top: 20px;*/
+	line-height: 1;
+	font-size: 16px;
+	font-weight: 400;
+	/*background: rgba(255, 255, 255, 0.1);*/
+    /*background: rgb(26,117,B207);*/
+    background: #FF3424;
+	transition: all 0.2s ease-in-out;
+	font-family: 'Poppins', sans-serif;
+}
+
+.center {
+    text-align: center
+}
+
+.schedule-times {
+    padding-right: 3em;
+}
+

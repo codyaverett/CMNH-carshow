@@ -45,6 +45,9 @@ var VehicleRegistrationSchema = new Schema({
         type: String,
         required: 'Please choose a Vehicle Class'  
     },
+    clubAffiliation: {
+        type: String  
+    },
 	created: {
 		type: Date,
 		default: Date.now

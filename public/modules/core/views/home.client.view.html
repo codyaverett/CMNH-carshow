@@ -5,8 +5,8 @@
         <div class="container">
             <div class="col-md-12 some-notes row">
                 
-                <div class="logo">
-                    <img src="modules/core/img/carshow_dash_plaque.png" style="width: 100%"></img>
+                <div class="center">
+                    <img src="modules/core/img/carshow_dash_plaque.png" class="logo"></img>
                 </div>
                 
                 <hr>
@@ -16,7 +16,7 @@
                 </div>
                 <div class="desc">
                     
-                    <p><Strong>All proceeds benefitting Arkansas Children's Hospital</Strong></p>
+                    <p><Strong>All proceeds benefiting Arkansas Children's Hospital</Strong></p>
                     
                     <p>Our rally is put together by Walmart Associate Volunteers to raise much needed funds for the Children's
                         Miracle Network Hospitals & Arkansas Children's Hospital. Our Associate Volunteers are dedicated
@@ -28,6 +28,13 @@
                     <p>So whether you are a car fanatic, a bike rider by weekend, or just appreciate the glisten of 
                         freshly-polished chrome, we invite you to attend our event. Register your ride below. 
                         Hope to see you there!</p>
+                </div>
+                
+                <div class="center" ng-show="authentication.user">
+                    </br>
+                    <button href="#!/vehicle-registrations" class="fancy-button">View Your Registered Vehicles</button>
+                    <button href="#!/vehicle-registrations/create" class="fancy-button">Add a Vehicle</button>
+                    </br>
                 </div>
                 
                 <!--div class="featured-links padding-tb50">
@@ -51,28 +58,60 @@
                     <hr>
                 
                     <div class="title">
-                        <h2>Register Now</h2>
+                        <h2><a href="#!/signup">Register Now</a></h2>
                     </div>
                     <div class="desc">
                         <p> In order to enter in the competition, you will need to register your vehicles.
-                            Pre-registering now and save 5 dollars at the register.</p>
-                            
-                            <div class="row" style="padding-top: 10px;">
-                                <a href="#!/signup" class="link-button text-center col-md-3 col-sm-3">Register Online</a>
+                            Pre-registering now saves you $5 on each vehicle at the event.</p>
+                               
+                            </br>
+
+                            <div class="center">
+                                <button href="#!/signup" class="fancy-button">Register Online</button>
                             </div>
-                            
-                            <div class="row" style="margin: 10px;">
-                                <strong>OR</strong>                        
-                            </div>
-                            
-                            <div class="row" style="padding-bottom: 10px;">
-                                <a href="/modules/core/resources/CarShow_Registration.pdf" class="link-button col-md-4 col-sm-4">Print and Mail Registration</a>
+  
+                            </br>
+  
+                            <div class="center">
+                                <button href="/modules/core/resources/CarShow_Registration.pdf" class="fancy-button">Print and Mail</button>
                             </div>
                         
-                        <p></p>
+                            </br>
                     
                     </div> 
                 
+                </div>
+
+                <hr>
+                    <div class="title">
+                    <h2>Schedule Of Events</h2>
+                </div>
+                <div class="desc">
+                    <div class="center">
+                        7am – 12:30pm : Registration </br>
+                        9am – 1pm : Drive-Thru Judging </br>
+                        1:30pm : Lineup Begins </br>
+                        2pm : Cruising Vehicles Leave Lot </br>
+                        3pm : Cruising Vehicles Return </br>
+                        3:15pm - 4pm  : Awards </br>
+                    </div>
+                </div>
+                
+                <hr>
+                
+                <div class="title">
+                    <h2>T-Shirts</h2>
+                </div>
+                <div class="desc">
+                    <p>
+                        Purchase your cool t-shirts at the event. To get a sneak peak, <a href="/modules/core/resources/CarsBikesBBQ2016TShirts.pdf">click here!</a>
+                        
+                        <ul style="text-align:center; list-style-type: none">
+                            <li>Youth Sizes: S - M - L = $10</li>
+                            <li>Adult Sizes: S - M - L - XL = $12</li>
+                            <li>Adult Sizes: XXL - 3X - 4X - 5X = $14</li>
+                        </ul>
+                    </p>
                 </div>
                 
                 <hr>
@@ -83,14 +122,9 @@
                 <div class="desc">
                     <p>
                     <a href="https://goo.gl/maps/MDDbjrZES4m">David Glass Technology Center Parking Lot </br>
-                    805 Moberly Lane</br>
+                    805 SE Moberly Lane</br>
                     Bentonville, Arkansas</a>
                     </p>
-                </div>
-                
-                <div  ng-show="authentication.user">
-                    <p></br><a href="#!/vehicle-registrations" class="link-button col-md-12 col-sm-12">View Your Registered Vehicles</a></p>
-                    <p></br><a href="#!/vehicle-registrations/create" class="link-button col-md-12 col-sm-12">Add a Vehicle</a></p>
                 </div>
             
             <div class="col-md-12 some-notes row">
@@ -99,8 +133,7 @@
                     <h2>Our Sponsors</h2>
                 </div>
                 <div class="desc">
-                    <p>If you are interested in partnering in future events, please use the form below to contact one 
-                        of our event coordinators. We will get back with you shortly and walk you through 
+                    <p>If you are interested in partnering in future events, please <a href="mailto:CarShowSup@wal-mart.com"> email our Event Coordinators.</a> We will get back with you shortly and walk you through 
                         all of the details.</p>
                 </div>
 

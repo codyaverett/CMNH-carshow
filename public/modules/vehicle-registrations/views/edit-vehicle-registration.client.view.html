@@ -27,24 +27,24 @@
                                     <input type="text" data-ng-model="vehicleRegistration.name" id="name" class="form-control" placeholder="Name" required>
                                 </div>
                             </div>
-                            <!--div class="col-md-6">
+                            <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="InputLastName">Last Name</label>
-                                    <input type="text" class="form-control" id="InputLastName" placeholder="Last Name">
+                                    <label for="InputLastName">Club Affiliation</label>
+                                    <input type="text" data-ng-model="vehicleRegistration.clubAffiliation" class="form-control" id="InputLastName" placeholder="">
                                 </div>
-                            </div-->
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="InputVehicleType">Vehicle Type</label>
-                                    <input type="text" class="form-control" id="InputVehicleType" data-ng-model="vehicleRegistration.type" placeholder="Vehicle Type">
+                                    <input type="text" class="form-control" id="InputVehicleType" data-ng-model="vehicleRegistration.type" placeholder="">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="InputVehicleYear">Vehicle Year</label>
-                                    <input type="text" class="form-control" id="InputVehicleYear" data-ng-model="vehicleRegistration.year" placeholder="Vehicle Year">
+                                    <input type="text" class="form-control" id="InputVehicleYear" data-ng-model="vehicleRegistration.year" placeholder="ex. 1991">
                                 </div>
                             </div>
                         </div>
@@ -52,13 +52,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="InputVehicleType">Vehicle Make</label>
-                                    <input type="text" class="form-control" id="InputVehicleMake" data-ng-model="vehicleRegistration.make" placeholder="Vehicle Make">
+                                    <input type="text" class="form-control" id="InputVehicleMake" data-ng-model="vehicleRegistration.make" placeholder="ex. Ford">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="InputVehicleModel">Vehicle Model</label>
-                                    <input type="text" class="form-control" id="InputVehicleModel" data-ng-model="vehicleRegistration.model" placeholder="Vehicle Model">
+                                    <input type="text" class="form-control" id="InputVehicleModel" data-ng-model="vehicleRegistration.model" placeholder="ex. Model B">
                                 </div>
                             </div>
                         </div>
@@ -72,11 +72,6 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="InputEntryClass">Entry Class</label>
-                                        </br>
-                                    	<div class="alert alert-info">
-                                            Original: only stock/OEM factory components </br>
-									        Modified: non-stock/after market items added to car
-                                        </div>
                                        <select class="form-control" data-ng-model="vehicleRegistration.class">
                                         <option>Car Original (1900-1970)</option>
                                         <option>Car Original (1971-Present)</option>
@@ -107,8 +102,8 @@
                             </div>
                         </div>
 
-                        <button type="submit" value="Update" class="btn tf-btn btn-default">Update</button>
-                        <button href="vehicleregistrations" class="btn tf-btn btn-danger" data-ng-click="remove();" 
+                        <button type="submit" value="Update" class="fancy-button">Update</button>
+                        <button href="vehicleregistrations" class="fancy-button-red" data-ng-click="remove();" 
                             data-ng-show="((authentication.user) && (authentication.user._id == vehicleRegistration.user._id))">Remove <span class="glyphicon glyphicon-trash"></span></button>
                          
                          <div data-ng-show="error" class="text-danger">

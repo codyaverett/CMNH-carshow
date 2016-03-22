@@ -28,6 +28,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
+                                    <label for="InputClubAffiliation">Club Affiliation</label>
+                                    <input type="text" data-ng-model="vehicleRegistration.clubAffiliation" class="form-control" id="InputClubAffiliaton" placeholder="Club Affiliation">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
                                     <label for="InputVehicleType">Vehicle Type</label>
                                     <input type="text" class="form-control" id="InputVehicleType" data-ng-model="vehicleRegistration.type" placeholder="Vehicle Type" required>
                                 </div>
@@ -63,11 +71,6 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="InputEntryClass">Entry Class</label>
-                                    </br>
-                                    <div class="alert alert-info">
-                                        Original: only stock/OEM factory components </br>
-                                        Modified: non-stock/after market items added to car
-                                    </div>
                                     <select class="form-control" data-ng-model="vehicleRegistration.class" required>
                                         <option>Car Original (1900-1970)</option>
                                         <option>Car Original (1971-Present)</option>
@@ -97,7 +100,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" value="Update" class="btn tf-btn btn-default">SUBMIT</button>
+                        <button type="submit" value="Update" class="fancy-button">SUBMIT</button>
                         <div data-ng-show="error" class="text-danger">
                             <strong data-ng-bind="error"></strong>
                         </div>
