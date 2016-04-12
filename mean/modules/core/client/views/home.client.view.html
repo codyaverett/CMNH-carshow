@@ -1,51 +1,51 @@
 <section data-ng-controller="HomeController">
     <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css">
     <div class="main" id="page-top">
-        
+
         <div class="container">
             <div class="col-md-12 some-notes row">
-                
+
                 <div class="center">
-                    <img src="modules/core/img/carshow_dash_plaque.png" class="logo"></img>
+                    <img src="modules/core/client/img/carshow_dash_plaque.png" class="logo"></img>
                 </div>
-                
+
                 <hr>
-                
+
                 <div class="title">
                     <h2>Welcome to the Car Show</h2>
                 </div>
                 <div class="desc">
-                    
+
                     <p><Strong>All proceeds benefiting Arkansas Children's Hospital</Strong></p>
-                    
+
                     <p>Our rally is put together by Walmart Associate Volunteers to raise much needed funds for the Children's
                         Miracle Network Hospitals & Arkansas Children's Hospital. Our Associate Volunteers are dedicated
                         to helping children and helping you show off your cool rides. We've had tremendous success in the
                         past rallies because of our gracious partners, dedicated volunteers, and visiting patrons.</p>
-                    
+
                         </br>
-                    
-                    <p>So whether you are a car fanatic, a bike rider by weekend, or just appreciate the glisten of 
-                        freshly-polished chrome, we invite you to attend our event. Register your ride below. 
+
+                    <p>So whether you are a car fanatic, a bike rider by weekend, or just appreciate the glisten of
+                        freshly-polished chrome, we invite you to attend our event. Register your ride below.
                         Hope to see you there!</p>
                 </div>
-                
+
                 <div class="center" ng-show="authentication.user">
-                    
+
                     <hr>
-                    
+
                     <h3 style="color: #367c2b">
                         You are Registered Successfully! See you on May 7th!
                     </h3>
-                    
+
                     </br>
                         <button href="#!/vehicle-registrations" class="fancy-button">View Your Registered Vehicles</button> </br> </br>
                         <button href="#!/vehicle-registrations/create" class="fancy-button">Add a Vehicle</button>
                     </br>
-                    
-                    
+
+
                 </div>
-                
+
                 <!--div class="featured-links padding-tb50">
                     <a href="#" class="featured-link col-md-6 col-sm-6">
                         <span>Have a car to show off?</span>
@@ -60,60 +60,60 @@
                         <strong>Get involved</strong>
                     </a>
                 </div-->
-                
-                
+
+
                 <div ng-hide="authentication.user">
-                
+
                     <hr>
-                
+
                     <div class="title">
                         <h2><a href="#!/signup">Register Now</a></h2>
                     </div>
                     <div class="desc">
                         <p> In order to enter in the competition, you will need to register your vehicles.
                             Pre-registering now saves you $5 on each vehicle at the event.</p>
-                               
+
                             </br>
-                            
+
                             <p>
                                 <div class="center">
                                     $20 - Pre-Registration </br>
-                                    $25 - Day of Show  
-                                </div>      
+                                    $25 - Day of Show
+                                </div>
                             </p>
-                            
+
                             </br>
                             </br>
 
                             <div class="center">
                                 <a href="#!/signup" class="fancy-button">Register Online</a>
                             </div>
-  
+
                             </br>
                             </br>
-  
+
                             <div class="center">
                                 <a href="/modules/core/resources/CarShow_Registration.pdf" class="fancy-button">Print and Mail</a>
                             </div>
-                        
+
                             </br>
                             </br>
-                            
+
                             <p>
-                                    Registration fees may be paid along with required waiver signed in person the day of the 
+                                    Registration fees may be paid along with required waiver signed in person the day of the
                                     show at the Registration Booth. Cash, check, or debit card will be accepted. All checks
-                                    should be made payable to: ACH	
+                                    should be made payable to: ACH
                             </p>
-                            
+
                             </br>
-                            
+
                             <p>
                                 You may also Mail your checks to the following address:</br>
-                                Walmart	Stores Inc. ATTN: Maggie Jenkins, 805 SE Moberly Lane, Bentonville, AR 72715		
+                                Walmart	Stores Inc. ATTN: Maggie Jenkins, 805 SE Moberly Lane, Bentonville, AR 72715
                             </p>
-                    
-                    </div> 
-                
+
+                    </div>
+
                 </div>
 
                 <hr>
@@ -121,11 +121,11 @@
                     <h2>Schedule Of Events</h2>
                 </div>
                 <div class="desc">
-                    
+
                     <h3 class="center">
                         May 7th 2016
                     </h3>
-                    
+
                     <div class="center">
                         7am – 12:30pm : Registration </br>
                         9am – 1pm : Drive-Thru Judging </br>
@@ -135,16 +135,16 @@
                         3:15pm - 4pm  : Awards </br>
                     </div>
                 </div>
-                
+
                 <hr>
-                
+
                 <div class="title">
                     <h2>T-Shirts</h2>
                 </div>
                 <div class="desc">
                     <p>
                         Purchase your cool t-shirts at the event. To get a sneak peak, <a href="/modules/core/resources/CarsBikesBBQ2016TShirts.pdf">click here!</a>
-                        
+
                         <ul style="text-align:center; list-style-type: none">
                             <li>Youth Sizes: S - M - L = $10</li>
                             <li>Adult Sizes: S - M - L - XL = $12</li>
@@ -152,9 +152,9 @@
                         </ul>
                     </p>
                 </div>
-                
+
                 <hr>
-                
+
                 <div class="title">
                     <h2>Event Location</h2>
                 </div>
@@ -165,24 +165,24 @@
                             Bentonville, Arkansas</a>
                     </p>
                 </div>
-            
+
             <div class="col-md-12 some-notes row">
                 <hr>
                 <div class="title">
                     <h2>Our Sponsors</h2>
                 </div>
                 <div class="desc">
-                    
-                    <p>If you are interested in partnering in future events, please <a href="mailto:CarShowSup@wal-mart.com"> email our Event Coordinators.</a> We will get back with you shortly and walk you through 
+
+                    <p>If you are interested in partnering in future events, please <a href="mailto:CarShowSup@wal-mart.com"> email our Event Coordinators.</a> We will get back with you shortly and walk you through
                         all of the details.</p>
                 </div>
-                
+
                </br>
-                
+
                 <div class="center">
-                    <img src="modules/core/img/sponsor.jpg" style="width:70%"></img>
+                    <img src="modules/core/client/img/sponsor.jpg" style="width:70%"></img>
                 </div>
-            
+
         </div>
     </div>
 </section>
