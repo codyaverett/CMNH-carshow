@@ -25,6 +25,13 @@ var validateLocalStrategyEmail = function (email) {
 };
 
 /**
+ * A Validation function for local strategy password
+ */
+var validateLocalStrategyPassword = function(password) {
+  return (this.provider !== 'local' || (password && password.length > 6));
+};
+
+/**
  * User Schema
  */
 var UserSchema = new Schema({
@@ -46,29 +53,55 @@ var UserSchema = new Schema({
   },
   email: {
     type: String,
-    unique: true,
-    lowercase: true,
     trim: true,
     default: '',
-    validate: [validateLocalStrategyEmail, 'Please fill a valid email address']
+    validate: [validateLocalStrategyProperty, 'Please fill in your email'],
+    match: [/.+\@.+\..+/, 'Please fill a valid email address']
   },
   username: {
     type: String,
-    unique: 'Username already exists',
+    unique: 'testing error message',
     required: 'Please fill in a username',
-    lowercase: true,
     trim: true
   },
   password: {
     type: String,
-    default: ''
+    default: '',
+    validate: [validateLocalStrategyPassword, 'Password should be at least 6 characters']
+  },
+  phoneNumber: {
+    type: String,
+    validate: {
+      validator: function(v) {
+        return /\d{3}-\d{3}-\d{4}/.test(v);
+      },
+      message: '{VALUE} is not a valid phone number!'
+    },
+    required: [true, 'User phone number required']
+  },
+  address: {
+    type: String,
+    required: 'Please enter your Street Address'
+  },
+  city: {
+    type: String,
+    required: 'Please enter your City'
+  },
+  zip: {
+    type: Number,
+    required: 'Please enter you Zip Code'
+  },
+  clubAffiliation: {
+    type: String
+  },
+  previouslyParticipated: {
+    type: Boolean
+  },
+  postPictures: {
+    type: Boolean
   },
   salt: {
     type: String
-  },
-  profileImageURL: {
-    type: String,
-    default: 'modules/users/client/img/profile/default.png'
   },
   provider: {
     type: String,
@@ -81,8 +114,7 @@ var UserSchema = new Schema({
       type: String,
       enum: ['user', 'admin']
     }],
-    default: ['user'],
-    required: 'Please provide at least one role'
+    default: ['user']
   },
   updated: {
     type: Date
