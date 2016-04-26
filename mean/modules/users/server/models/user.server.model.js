@@ -69,11 +69,11 @@ var UserSchema = new Schema({
     default: '',
     validate: [validateLocalStrategyPassword, 'Password should be at least 6 characters']
   },
-  phoneNumber: {
+  phonenumber: {
     type: String,
     validate: {
       validator: function(v) {
-        return /\d{3}-\d{3}-\d{4}/.test(v);
+        return /\d{9}/.test(v);
       },
       message: '{VALUE} is not a valid phone number!'
     },
@@ -87,11 +87,11 @@ var UserSchema = new Schema({
     type: String,
     required: 'Please enter your City'
   },
-  zip: {
+  zipcode: {
     type: Number,
     required: 'Please enter you Zip Code'
   },
-  clubAffiliation: {
+  club: {
     type: String
   },
   previouslyParticipated: {
