@@ -15,9 +15,9 @@
 
           <form name="userForm" ng-submit="signup(userForm.$valid)" class="signin" novalidate autocomplete="off">
             <fieldset>
-              
+
               <div class="row">
-                
+
                 <div class="col-md-6">
                   <div class="form-group" show-errors>
                     <label for="firstName">First Name</label>
@@ -27,8 +27,8 @@
                     </div>
                   </div> <!-- End Form Group -->
                 </div> <!-- End Column -->
-                    
-                <div class="col-md-6">         
+
+                <div class="col-md-6">
                   <div class="form-group" show-errors>
                     <label for="lastName">Last Name</label>
                     <input type="text" id="lastName" name="lastName" class="form-control" ng-model="credentials.lastName" placeholder="Last Name" required>
@@ -37,11 +37,11 @@
                     </div>
                   </div> <!-- End Form Group -->
                 </div> <!-- End Column -->
-              
+
               </div> <!-- End Row -->
-              
+
               <div class="row">
-                <div class="col-md-6">  
+                <div class="col-md-6">
                   <div class="form-group" show-errors>
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" class="form-control" ng-model="credentials.email" placeholder="Email" lowercase required>
@@ -51,7 +51,7 @@
                     </div>
                   </div>
                 </div> <!-- End Column -->
-                <div class="col-md-6">  
+                <div class="col-md-6">
                   <div class="form-group" show-errors>
                     <label for="phonenumber">Phone Number</label>
                     <input type="phonenumber" id="phonenumber" name="phonenumber" class="form-control" ng-model="credentials.phonenumber" placeholder="ex. 1231231234" required>
@@ -62,9 +62,9 @@
                   </div>
                 </div> <!-- End Column -->
               </div> <!-- End Row -->
-              
+
               <div class="row">
-                <div class="col-md-12">  
+                <div class="col-md-12">
                   <div class="form-group" show-errors>
                     <label for="address">Address</label>
                     <input type="address" id="address" name="address" class="form-control" ng-model="credentials.address" placeholder="Address" lowercase required>
@@ -75,9 +75,9 @@
                   </div>
                 </div> <!-- End Column -->
               </div> <!-- End Row -->
-              
+
               <div class="row">
-                <div class="col-md-4">  
+                <div class="col-md-4">
                   <div class="form-group" show-errors>
                     <label for="city">City</label>
                     <input type="city" id="city" name="city" class="form-control" ng-model="credentials.city" placeholder="City" required>
@@ -87,7 +87,7 @@
                     </div>
                   </div>
                 </div> <!-- End Column -->
-                <div class="col-md-4">  
+                <div class="col-md-4">
                   <div class="form-group" show-errors>
                     <label for="state">State</label>
                       <select type="state" id="state" name="state" class="form-control" ng-model="credentials.state" placeholder="State" required>
@@ -148,7 +148,7 @@
                     </div>
                   </div>
                 </div> <!-- End Column -->
-                <div class="col-md-4">  
+                <div class="col-md-4">
                   <div class="form-group" show-errors>
                     <label for="zipcode">Zip Code</label>
                     <input type="zipcode" id="zipcode" name="zipcode" class="form-control" ng-model="credentials.zipcode" placeholder="Zip Code" required>
@@ -159,27 +159,27 @@
                   </div>
                 </div> <!-- End Column -->
               </div> <!-- End Row -->
-              
+
               <div class="row">
-                <div class="col-md-12">  
+                <div class="col-md-12">
                   <div class="form-group" show-errors>
                     <label for="club">Club Affiliation</label>
                     <input type="club" id="club" name="club" class="form-control" ng-model="credentials.club" placeholder="Club Name">
                   </div>
                 </div> <!-- End Column -->
               </div> <!-- End Row -->
-              
+
               <div class="row">
                 <div class="col-md-6">
                   <input type="checkbox" data-ng-model="credentials.previouslyParticipated" value "">&nbsp Have you previously participated?
                 </div> <!-- End Column -->
                 <div class="col-md-6">
                   <input type="checkbox" data-ng-model="credentials.postPictures" value="">&nbsp Can we post photos of your vehicles?
-                </div> <!-- End Column -->   
+                </div> <!-- End Column -->
               </div> <!-- End row -->
-              
+
               </br>
-              
+
               <div class="form-group" show-errors>
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" class="form-control" ng-model="credentials.username" placeholder="Username" lowercase required>
@@ -197,12 +197,7 @@
                   </div>
                 </div>
               </div>
-              
-              <!--div class="form-group" ng-show="!userForm.password.$error.required">
-                <label>Password Requirements</label>
-                <progressbar value="requirementsProgress" type="{{requirementsColor}}"><span style="color:white; white-space:nowrap;">{{requirementsProgress}}%</span></progressbar>
-              </div-->
-              
+
               <div class="text-center form-group">
                 <button type="submit" class="btn btn-primary">Sign up</button>
                 &nbsp; or&nbsp;
@@ -211,9 +206,9 @@
               <div ng-show="error" class="text-center text-danger">
                 <strong ng-bind="error"></strong>
               </div>
-            
+
             </fieldset>
-            
+
           </form>
 
         </div>
