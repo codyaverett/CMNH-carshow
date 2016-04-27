@@ -87,6 +87,10 @@ var UserSchema = new Schema({
     type: String,
     required: 'Please enter your City'
   },
+  state: {
+    type: String,
+    required: 'Please choose your State'
+  },
   zipcode: {
     type: Number,
     required: 'Please enter you Zip Code'
