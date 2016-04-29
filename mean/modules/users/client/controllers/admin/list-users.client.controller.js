@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('users.admin').controller('UserListController', ['$scope', '$filter', 'Admin',
-  function ($scope, $filter, Admin) {
+angular.module('users.admin').controller('UserListController', ['$scope', '$filter', 'Admin', '$state',
+  function ($scope, $filter, Admin, $state) {
     Admin.query(function (data) {
       $scope.users = data;
       $scope.buildPager();
@@ -27,5 +27,9 @@ angular.module('users.admin').controller('UserListController', ['$scope', '$filt
     $scope.pageChanged = function () {
       $scope.figureOutItemsToDisplay();
     };
+
+    $scope.goToCreateUser = function() {
+        $state.go('admin.user-create');
+    }
   }
 ]);

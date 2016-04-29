@@ -21,25 +21,7 @@ exports.invokeRolesPolicies = function () {
       resources: '/api/data/:datumId',
       permissions: '*'
     }]
-  }, {
-    roles: ['user'],
-    allows: [{
-      resources: '/api/data',
-      permissions: ['get', 'post']
-    }, {
-      resources: '/api/data/:datumId',
-      permissions: ['get']
-    }]
-  }, {
-    roles: ['guest'],
-    allows: [{
-      resources: '/api/data',
-      permissions: ['get']
-    }, {
-      resources: '/api/data/:datumId',
-      permissions: ['get']
-    }]
-  }]);
+  } ]);
 };
 
 /**
