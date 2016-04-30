@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('users.admin').controller('UserController', ['$scope', '$state', 'Authentication', 'userResolve',
-  function ($scope, $state, Authentication, userResolve) {
+angular.module('users.admin').controller('UserController', ['$scope', '$state', 'Authentication', 'Users', 'userResolve',
+  function ($scope, $state, Authentication, Users, userResolve) {
     $scope.authentication = Authentication;
     $scope.user = userResolve;
 
@@ -19,6 +19,7 @@ angular.module('users.admin').controller('UserController', ['$scope', '$state', 
       }
     };
 
+    var user = new Users($scope.user);
     $scope.update = function (isValid) {
       if (!isValid) {
         $scope.$broadcast('show-errors-check-validity', 'userForm');
