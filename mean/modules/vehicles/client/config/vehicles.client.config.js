@@ -24,7 +24,7 @@
 
     // Add the dropdown create item
     Menus.addSubMenuItem('topbar', 'vehicles', {
-      title: 'Create Vehicle',
+      title: 'Register Vehicle',
       state: 'vehicles.create',
       roles: ['user']
     });
