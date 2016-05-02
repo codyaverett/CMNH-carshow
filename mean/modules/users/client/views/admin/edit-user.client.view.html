@@ -159,11 +159,20 @@
         </div> <!-- End Row -->
 
         <div class="row">
+          <div class="col-md-12">
+            <div class="form-group" show-errors>
+              <label for="role">Roles</label>
+              <input type="role" id="role" name="role" class="form-control" ng-model="user.roles" placeholder="User Roles">
+            </div>
+          </div> <!-- End Column -->
+        </div> <!-- End Row -->
+
+        <div class="row">
           <div class="col-md-6">
-            <input type="checkbox" data-ng-model="user.previouslyParticipated" value "">&nbsp Have you previously participated?
+            <input type="checkbox" data-ng-model="user.previouslyParticipated" value "">&nbsp Have they previously participated?
           </div> <!-- End Column -->
           <div class="col-md-6">
-            <input type="checkbox" data-ng-model="user.postPictures" value="">&nbsp Can we post photos of your vehicles?
+            <input type="checkbox" data-ng-model="user.postPictures" value="">&nbsp Can we post photos of their vehicles?
           </div> <!-- End Column -->
         </div> <!-- End row -->
 
