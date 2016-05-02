@@ -18,7 +18,19 @@ angular.module('users.admin').controller('UserController', ['$scope', '$state', 
         }
       }
     };
+    
+    $scope.signup = function (isValid) {
+      $scope.error = null;
 
+      $http.post('/api/auth/signup', $scope.credentials).success(function (response) {
+
+        // And redirect to the previous or home page
+        $state.go('admin.user');
+      }).error(function (response) {
+        $scope.error = response.message;
+      });
+    };
+    
     var user = new Users($scope.user);
     $scope.update = function (isValid) {
       if (!isValid) {

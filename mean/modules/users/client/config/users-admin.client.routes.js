@@ -33,10 +33,10 @@ angular.module('users.admin.routes').config(['$stateProvider',
           }]
         }
       })
-        .state('admin.user-create', {
-          url: '/signupUser',
-          templateUrl: 'modules/users/client/views/admin/create-user.client.view.html',
-            controller: 'AuthenticationController'
-        });
+      .state('admin.user-create', {
+        url: '/users/signup',
+        templateUrl: 'modules/users/client/views/admin/create-user.client.view.html',
+        controller: 'UserController'
+      });
   }
 ]);

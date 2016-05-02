@@ -27,9 +27,5 @@ angular.module('users.admin').controller('UserListController', ['$scope', '$filt
     $scope.pageChanged = function () {
       $scope.figureOutItemsToDisplay();
     };
-
-    $scope.goToCreateUser = function() {
-        $state.go('admin.user-create');
-    }
   }
 ]);

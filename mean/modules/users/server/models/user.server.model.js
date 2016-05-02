@@ -31,6 +31,17 @@ var validateLocalStrategyPassword = function(password) {
   return (this.provider !== 'local' || (password && password.length > 6));
 };
 
+var generateUsername = function makeid()
+{
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for( var i=0; i < 15; i++ )
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
+
 /**
  * User Schema
  */
@@ -62,12 +73,13 @@ var UserSchema = new Schema({
     type: String,
     unique: 'testing error message',
     required: 'Please fill in a username',
+    default: "user_" + generateUsername(),
     trim: true
   },
   password: {
     type: String,
-    default: '',
-    validate: [validateLocalStrategyPassword, 'Password should be at least 6 characters']
+    default: 'carsbikesbbq'
+    //validate: [validateLocalStrategyPassword, 'Password should be at least 6 characters']
   },
   phonenumber: {
     type: String,

@@ -7,5 +7,11 @@ angular.module('users.admin').run(['Menus',
       title: 'Manage Users',
       state: 'admin.users'
     });
+    
+    Menus.addSubMenuItem('topbar', 'admin', {
+      title: 'Create New User',
+      state: 'admin.user-create'
+    });
+    
   }
 ]);
