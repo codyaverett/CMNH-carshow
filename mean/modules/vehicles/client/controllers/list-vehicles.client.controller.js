@@ -5,10 +5,11 @@
     .module('vehicles')
     .controller('VehiclesListController', VehiclesListController);
 
-  VehiclesListController.$inject = ['VehiclesService'];
+  VehiclesListController.$inject = ['VehiclesService', 'Authentication'];
 
-  function VehiclesListController(VehiclesService) {
+  function VehiclesListController(VehiclesService, Authentication) {
     var vm = this;
+    vm.authentication = Authentication;
 
     vm.vehicles = VehiclesService.query();
   }

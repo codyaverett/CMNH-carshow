@@ -1,22 +1,26 @@
 <section>
   <div class="page-header">
-    <h1>Vehicles</h1>
+    <h1>Your Vehicles</h1>
   </div>
   <div class="list-group">
-    <a data-ng-repeat="vehicle in vm.vehicles"
-       data-ui-sref="vehicles.edit({ vehicleId: vehicle._id })"
-       class="list-group-item">
-      <small class="list-group-item-text">
-        Posted on
-        <span data-ng-bind="vehicle.created | date:'mediumDate'"></span>
-        by
-        <span data-ng-if="vehicle.user" data-ng-bind="vehicle.user.displayName"></span>
-        <span data-ng-if="!vehicle.user">Deleted User</span>
-      </small>
-      <h4 class="list-group-item-heading" data-ng-bind="vehicle.name"></h4>
-    </a>
+    <div data-ng-repeat="vehicle in vm.vehicles">
+       <a data-ui-sref="vehicles.edit({ vehicleId: vehicle._id })"
+        class="list-group-item" ng-show="vm.authentication.user._id === vehicle.user._id">
+        <small class="list-group-item-text">
+          Posted on
+          <span data-ng-bind="vehicle.created | date:'mediumDate'"></span>
+          by
+          <span data-ng-if="vehicle.user" data-ng-bind="vehicle.user.displayName"></span>
+          <span data-ng-if="!vehicle.user">Deleted User</span>
+        </small>
+        <h4 class="list-group-item-heading" data-ng-bind="vehicle.name"></h4>
+      </a>
+    </div> <!-- End ng-repeat -->
   </div>
   <div class="alert alert-warning text-center" data-ng-if="vm.vehicles.$resolved && !vm.vehicles.length">
     No Vehicles yet, why don't you <a data-ui-sref="vehicles.create">create one</a>?
+  </div>
+  <div class="alert text-center" data-ng-if="vm.vehicles.$resolved && vm.vehicles.length">
+    <a data-ui-sref="vehicles.create">Add Another Vehicle</a>
   </div>
 </section>
