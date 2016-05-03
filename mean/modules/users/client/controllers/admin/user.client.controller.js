@@ -25,13 +25,13 @@ angular.module('users.admin').controller('UserController', ['$scope', '$state', 
       $http.post('/api/auth/signup', $scope.credentials).success(function (response) {
 
         // And redirect to the previous or home page
-        $state.go('admin.user');
+        $state.go('admin.users');
       }).error(function (response) {
         $scope.error = response.message;
       });
     };
     
-    var user = new Users($scope.user);
+    //var user = new Users($scope.user);
     $scope.update = function (isValid) {
       if (!isValid) {
         $scope.$broadcast('show-errors-check-validity', 'userForm');
@@ -39,10 +39,10 @@ angular.module('users.admin').controller('UserController', ['$scope', '$state', 
         return false;
       }
 
-      var user = $scope.user;
+      //var user = $scope.user;
 
       user.$update(function () {
-        $state.go('admin.user', {
+        $state.go('admin.users', {
           userId: user._id
         });
       }, function (errorResponse) {
