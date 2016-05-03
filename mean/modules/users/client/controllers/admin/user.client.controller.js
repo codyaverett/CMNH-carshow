@@ -1,9 +1,10 @@
 'use strict';
 
-angular.module('users.admin').controller('UserController', ['$scope', '$state', 'Authentication', 'Users', 'userResolve',
-  function ($scope, $state, Authentication, Users, userResolve) {
+angular.module('users.admin').controller('UserController', ['$scope', '$state', 'Authentication', 'Users', 'userResolve', 'VehiclesService',
+  function ($scope, $state, Authentication, Users, userResolve, VehiclesService) {
     $scope.authentication = Authentication;
     $scope.user = userResolve;
+    $scope.vehicles = VehiclesService.query(); //get vehicle data
 
     $scope.remove = function (user) {
       if (confirm('Are you sure you want to delete this user?')) {

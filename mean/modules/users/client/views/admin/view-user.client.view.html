@@ -18,13 +18,8 @@
   <div class="row">
     <div class="col-md-8">
       <div class="row">
-        <div class="col-md-3"><strong>First Name</strong></div>
-        <div class="col-md-6" ng-bind="user.firstName"></div>
-      </div>
-      <hr/>
-      <div class="row">
-        <div class="col-md-3"><strong>Last Name</strong></div>
-        <div class="col-md-6" ng-bind="user.lastName"></div>
+        <div class="col-md-3"><strong>Name</strong></div>
+        <div class="col-md-6" ng-bind="user.firstName + user.lastName"></div>
       </div>
       <hr/>
       <div class="row">
@@ -32,11 +27,11 @@
         <div class="col-md-6" ng-bind="user.email"></div>
       </div>
       <hr/>
-      <div class="row">
+      <!--div class="row">
         <div class="col-md-3"><strong>Provider</strong></div>
         <div class="col-md-6" ng-bind="user.provider"></div>
       </div>
-      <hr/>
+      <hr/-->
       <div class="row">
         <div class="col-md-3"><strong>Created</strong></div>
         <div class="col-md-6" ng-bind="user.created"></div>
@@ -52,25 +47,20 @@
 
 <section>
   <div class="page-header">
-    <h1>Vehicles</h1>
+    <h1>Your Vehicles</h1>
   </div>
   <div class="list-group">
-    <div data-ng-repeat="vehicle in vm.vehicles">
-      <a data-ui-sref="vehicles.edit({ vehicleId: vehicle._id })"
-        class="list-group-item"> <!--ng-show="vehicle.user._id == user._id"-->
-        <small class="list-group-item-text">
-          Posted on
-          <span data-ng-bind="vehicle.created | date:'mediumDate'"></span>
-          by
-          <span data-ng-if="vehicle.user" data-ng-bind="vehicle.user.displayName"></span>
-          <span data-ng-if="!vehicle.user">Deleted User</span>
-        </small>
-        <h4 class="list-group-item-heading" data-ng-bind="vehicle.name"></h4>
-      </a>  
-    </div>
-  
+    <div data-ng-repeat="vehicle in vehicles">
+       <a data-ui-sref="vehicles.edit({ vehicleId: vehicle._id })"
+        class="list-group-item row" ng-show="user._id === vehicle.user._id">
+          <span class="col-md-4">{{vehicle.name}}</span> | {{vehicle.registrationNumber}} | {{vehicle.hasPayed}}
+      </a>
+    </div> <!-- End ng-repeat -->
+  </div>
   <div class="alert alert-warning text-center" data-ng-if="vm.vehicles.$resolved && !vm.vehicles.length">
-    No Vehicles added, why don't you <a data-ui-sref="vehicles.create">create one</a>?
-  </div>  
-  
+    No Vehicles yet, why don't you <a data-ui-sref="vehicles.create">create one</a>?
+  </div>
+  <div class="alert text-center" data-ng-if="vm.vehicles.$resolved && vm.vehicles.length">
+    <a data-ui-sref="vehicles.create">Add Another Vehicle</a>
+  </div>
 </section>
