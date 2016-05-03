@@ -34,7 +34,7 @@ angular.module('users.admin.routes').config(['$stateProvider',
         }
       })
       .state('admin.user-create', {
-        url: '/users/create',
+        url: '/create',
         templateUrl: 'modules/users/client/views/admin/create-user.client.view.html'
       });
   }

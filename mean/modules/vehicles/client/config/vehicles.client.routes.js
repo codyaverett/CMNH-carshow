@@ -36,6 +36,19 @@
           pageTitle : 'Vehicles Create'
         }
       })
+      .state('vehicles.admin-create', {
+        url: '/create/:user',
+        templateUrl: 'modules/vehicles/client/views/form-vehicle.client.view.html',
+        controller: 'VehiclesController',
+        controllerAs: 'vm',
+        resolve: {
+          vehicleResolve: newVehicle
+        },
+        data: {
+          roles: ['user', 'admin'],
+          pageTitle : 'Vehicles Create'
+        }
+      })
       .state('vehicles.edit', {
         url: '/:vehicleId/edit',
         templateUrl: 'modules/vehicles/client/views/form-vehicle.client.view.html',

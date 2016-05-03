@@ -47,7 +47,7 @@
 
 <section>
   <div class="page-header">
-    <h1>Your Vehicles</h1>
+    <h1>Vehicles</h1>
   </div>
   <div class="list-group">
     <div data-ng-repeat="vehicle in vehicles">
@@ -60,7 +60,7 @@
   <div class="alert alert-warning text-center" data-ng-if="vm.vehicles.$resolved && !vm.vehicles.length">
     No Vehicles yet, why don't you <a data-ui-sref="vehicles.create">create one</a>?
   </div>
-  <div class="alert text-center" data-ng-if="vm.vehicles.$resolved && vm.vehicles.length">
-    <a data-ui-sref="vehicles.create">Add Another Vehicle</a>
+  <div class="alert text-center">
+    <a data-ui-sref="vehicles.admin-create({ user: user })">Add Vehicle</a>
   </div>
 </section>

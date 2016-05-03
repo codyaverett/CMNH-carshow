@@ -11,6 +11,10 @@ module.exports = function(app) {
   app.route('/api/vehicles').all(vehiclesPolicy.isAllowed)
     .get(vehicles.list)
     .post(vehicles.create);
+    
+  app.route('/api/vehicles/:user').all(vehiclesPolicy.isAllowed)
+    .get(vehicles.list)
+    .post(vehicles.create);
 
   app.route('/api/vehicles/:vehicleId').all(vehiclesPolicy.isAllowed)
     .get(vehicles.read)

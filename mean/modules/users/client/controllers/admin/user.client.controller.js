@@ -32,7 +32,7 @@ angular.module('users.admin').controller('UserController', ['$scope', '$state', 
       });
     };
     
-    //var user = new Users($scope.user);
+    var user = new Users($scope.user);
     $scope.update = function (isValid) {
       if (!isValid) {
         $scope.$broadcast('show-errors-check-validity', 'userForm');
@@ -40,7 +40,7 @@ angular.module('users.admin').controller('UserController', ['$scope', '$state', 
         return false;
       }
 
-      //var user = $scope.user;
+      var user = $scope.user;
 
       user.$update(function () {
         $state.go('admin.users', {
