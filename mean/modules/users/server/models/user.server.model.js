@@ -30,18 +30,6 @@ var validateLocalStrategyEmail = function (email) {
 var validateLocalStrategyPassword = function(password) {
   return (this.provider !== 'local' || (password && password.length > 6));
 };
-
-var generateUsername = function makeid()
-{
-  var text = "";
-  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-  for( var i=0; i < 15; i++ )
-      text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-  return text;
-}
-
 /**
  * User Schema
  */
@@ -66,14 +54,17 @@ var UserSchema = new Schema({
     type: String,
     trim: true,
     default: '',
-    validate: [validateLocalStrategyProperty, 'Please fill in your email'],
-    match: [/.+\@.+\..+/, 'Please fill a valid email address']
+    //validate: [validateLocalStrategyProperty, 'Please fill in your email'],
+    //match: [/.+\@.+\..+/, 'Please fill a valid email address']
+  },
+  emergencyContact: {
+    type: String,
+    trim: true
   },
   username: {
     type: String,
     unique: 'testing error message',
     required: 'Please fill in a username',
-    default: "user_" + generateUsername(),
     trim: true
   },
   password: {
@@ -89,23 +80,23 @@ var UserSchema = new Schema({
       },
       message: '{VALUE} is not a valid phone number!'
     },
-    required: [true, 'User phone number required']
+    //required: [true, 'User phone number required']
   },
   address: {
     type: String,
-    required: 'Please enter your Street Address'
+    //required: 'Please enter your Street Address'
   },
   city: {
     type: String,
-    required: 'Please enter your City'
+    //required: 'Please enter your City'
   },
   state: {
     type: String,
-    required: 'Please choose your State'
+    //required: 'Please choose your State'
   },
   zipcode: {
     type: Number,
-    required: 'Please enter you Zip Code'
+    //required: 'Please enter you Zip Code'
   },
   club: {
     type: String
@@ -116,6 +107,46 @@ var UserSchema = new Schema({
   postPictures: {
     type: Boolean
   },
+  type: {
+      type: String,
+      default: '',
+      //required: 'Please fill the Vehicle Type',
+      trim: true
+  },
+  year: {
+      type: Number,
+      required: 'Please fill in the Vehicle Year',
+      trim: true 
+  },
+  make: {
+      type: String,
+      required: 'Please fill in the Vehicle Make',
+      trim: true  
+  },
+  model: {
+      type: String,
+      required: 'Please fill in the Vehicle Model',
+      trim: true
+  },
+  mods: {
+      type: String,
+      required: 'Please fill in the Vehicle Mods'  
+  },
+  class: {
+      type: String,
+      required: 'Please choose a Vehicle Class'  
+  },
+  hasPaid: {
+      type: Boolean
+  },
+  registrationNumber: {
+    type: Number,
+    unique: true,
+    required: 'RegistrationNumber is required'
+  },
+  preRegistered: {
+    type: Boolean
+  },  
   salt: {
     type: String
   },

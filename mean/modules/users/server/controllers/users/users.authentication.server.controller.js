@@ -41,14 +41,18 @@ exports.signup = function (req, res) {
       user.password = undefined;
       user.salt = undefined;
 
-      req.login(user, function (err) {
+      //TODO Add this back if it will be open to the public
+      //Need to make this a configuration based on the user that is logging in.
+      /*req.login(user, function (err) {
         if (err) {
           res.status(400).send(err);
         } else {
           res.json(user);
         }
-      });
+      });*/
+      return res.redirect('/admin/users');
     }
+    
   });
 };
 

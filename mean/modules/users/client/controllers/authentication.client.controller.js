@@ -7,9 +7,9 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$stat
 
     // Get an eventual error defined in the URL query string:
     $scope.error = $location.search().err;
-    $scope.isDataEntry = Authentication.auth.isDataEntry;
-
-    $scope.isDataEntry = Authentication.auth.isDataEntry;
+    $scope.isDataEntry = Authentication.isDataEntry;
+    $scope.generateUsername = Authentication.generateUsername;
+    //$scope.credentials.hasPaid = true;
 
     // If user is signed in then redirect back home
     if ($scope.authentication.user && !$scope.isDataEntry() ) {
@@ -24,19 +24,22 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$stat
         return false;
       }
 
+      $scope.credentials.username = $scope.generateUsername();
+
       $http.post('/api/auth/signup', $scope.credentials).success(function (response) {
         // If successful we assign the response to the global user model
-
         if (!$scope.isDataEntry()) {
           $scope.authentication.user = response;
           $state.go('vehicles.create');
         } else {
           // And redirect to the previous or home page
-          $state.go($state.previous.state.name || 'home', $state.previous.params);  
+          //$state.go($state.previous.state.name || 'home', $state.previous.params);
+          $state.go('admin.users');  
         }
       }).error(function (response) {
         $scope.error = response.message;
       });
+      
     };
 
     $scope.signin = function (isValid) {

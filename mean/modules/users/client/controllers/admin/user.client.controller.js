@@ -1,10 +1,12 @@
 'use strict';
 
-angular.module('users.admin').controller('UserController', ['$scope', '$state', 'Authentication', 'Users', 'userResolve', 'VehiclesService',
-  function ($scope, $state, Authentication, Users, userResolve, VehiclesService) {
+angular.module('users.admin').controller('UserController', ['$scope', '$state', 'Authentication', 'Users', 'userResolve',
+  function ($scope, $state, Authentication, Users, userResolve) {
     $scope.authentication = Authentication;
     $scope.user = userResolve;
-    $scope.vehicles = VehiclesService.query(); //get vehicle data
+    //$scope.vehicles = VehiclesService.query(); //get vehicle data//This was used for showing Vehicle data on the user screens
+
+    //console.log($scope.user); I hate this project, so much.  Scrapping it for next year
 
     $scope.remove = function (user) {
       if (confirm('Are you sure you want to delete this user?')) {
@@ -32,7 +34,7 @@ angular.module('users.admin').controller('UserController', ['$scope', '$state', 
       });
     };
     
-    var user = new Users($scope.user);
+    //var user = new Users($scope.user);
     $scope.update = function (isValid) {
       if (!isValid) {
         $scope.$broadcast('show-errors-check-validity', 'userForm');
