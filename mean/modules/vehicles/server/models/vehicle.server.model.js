@@ -45,11 +45,15 @@ var VehicleSchema = new Schema({
       type: String,
       required: 'Please choose a Vehicle Class'  
   },
-  hasPayed: {
+  hasPaid: {
       type: Boolean
   },
   registrationNumber: {
     type: Number,
+    unique: true
+  },
+  preRegistered: {
+    type: Boolean
   },
 	created: {
 		type: Date,

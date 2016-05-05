@@ -1,11 +1,11 @@
 <section>
   <div class="page-header">
-    <h1>Your Vehicles</h1>
+    <h1>Vehicles</h1>
   </div>
   <div class="list-group">
     <div data-ng-repeat="vehicle in vm.vehicles">
        <a data-ui-sref="vehicles.edit({ vehicleId: vehicle._id })"
-        class="list-group-item" ng-show="vm.authentication.user._id === vehicle.user._id">
+        class="list-group-item" ng-show="(vm.authentication.user._id === vehicle.user._id) || vm.authentication.isDataEntry()"
         <small class="list-group-item-text">
           Posted on
           <span data-ng-bind="vehicle.created | date:'mediumDate'"></span>
@@ -13,6 +13,9 @@
           <span data-ng-if="vehicle.user" data-ng-bind="vehicle.user.displayName"></span>
           <span data-ng-if="!vehicle.user">Deleted User</span>
         </small>
+        <p class="list-group-item-text pull-right" ng-show="vehicle.registrationNumber"><strong>Registrant ID: {{vehicle.registrationNumber}}</strong></p></br>
+        <p class="list-group-item-text pull-right" ng-show="vehicle.preRegistered"><strong>Pre-Registered </strong></p> </br>
+        <p class="list-group-item-text pull-right" ng-show="vehicle.hasPaid"><strong>$ Paid $</strong></p>
         <h4 class="list-group-item-heading" data-ng-bind="vehicle.name"></h4>
       </a>
     </div> <!-- End ng-repeat -->

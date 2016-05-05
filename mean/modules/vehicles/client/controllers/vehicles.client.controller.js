@@ -6,9 +6,9 @@
     .module('vehicles')
     .controller('VehiclesController', VehiclesController);
 
-  VehiclesController.$inject = ['$scope', '$state', 'Authentication', 'vehicleResolve'];
+  VehiclesController.$inject = ['$scope', '$state', '$stateParams', 'Authentication', 'vehicleResolve'];
 
-  function VehiclesController ($scope, $state, Authentication, vehicle) {
+  function VehiclesController ($scope, $state, $stateParams, Authentication, vehicle) {
     var vm = this;
 
     vm.authentication = Authentication;
@@ -17,7 +17,8 @@
     vm.form = {};
     vm.remove = remove;
     vm.save = save;
-
+    vm.user = { _id: $stateParams.user }; //getting ID parameters from parameters 
+    
     // Remove existing Vehicle
     function remove() {
       if (confirm('Are you sure you want to delete?')) {
@@ -40,9 +41,10 @@
       }
 
       function successCallback(res) {
-        $state.go('vehicles.view', {
+        $state.go('vehicles.list');
+        /*$state.go('vehicles.view', {
           vehicleId: res._id
-        });
+        });*/
       }
 
       function errorCallback(res) {
