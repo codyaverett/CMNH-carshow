@@ -18,7 +18,7 @@
     vm.remove = remove;
     vm.save = save;
     vm.user = { _id: $stateParams.user }; //getting ID parameters from parameters 
-    
+
     // Remove existing Vehicle
     function remove() {
       if (confirm('Are you sure you want to delete?')) {

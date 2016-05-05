@@ -7,7 +7,7 @@
 
           <div class="section-title center">
             <h2>
-              <strong>{{vm.vehicle._id ? 'Edit Vehicle' : 'New Vehicle'}}</strong>
+              <strong>{{vm.vehicle._id ? 'Edit Vehicle' : 'New Vehicle'}} <span ng-show="vm.vehicle.user">for </span> {{vm.vehicle.user ? vm.vehicle.user.displayName : '' }}</strong> {{ vm.user }}
             </h2>
             <div class="line">
               <hr>
