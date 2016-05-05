@@ -133,8 +133,68 @@ var UserSchema = new Schema({
       required: 'Please fill in the Vehicle Mods'  
   },
   class: {
-      type: String,
+     type: String,
+     enum: [  'Mothers Only',
+              'Cars Stock 1900-1971',
+              'Cars Stock 1972-Present',
+              'Cars Modified 1900-1971',
+              'Cars Modified 1972-Present',
+              'Cars Custom (All Years)',
+              'Truck Stock 1900-1971',
+              'Truck Stock 1972-Present',
+              'Truck Modified 1900-1971',
+              'Truck Modified 1972-Present',
+              '4x4s',
+              'Foreign Cars (All Years)',
+              'Mustang',
+              'Camaro',
+              'Corvette',
+              'Mopar Muscle',
+              'Street Rod',
+              'Tri-Fives',
+              'Rat Rods',
+              'Motorcycle Sport Bike',
+              'Motorcycle Touring',
+              'Motorcycle Custom'], 
       required: 'Please choose a Vehicle Class'  
+  },
+  judgepaint: {
+    type: [{
+      type: Number
+    }]
+  },
+  judgeextmods: {
+    type: [{
+      type: Number
+    }]
+  },
+  judgeenginemods: {
+    type: [{
+      type: Number
+    }]
+  },
+  judgesuspension: {
+    type: [{
+      type: Number
+    }]
+  },
+  judgewheels: {
+    type: [{
+      type: Number
+    }]
+  },
+  judgeinteriormods: {
+    type: [{
+      type: Number
+    }]
+  },
+  judgeaudiosecurity: {
+    type: [{
+      type: Number
+    }]
+  },
+  peoplechoice: {
+    type: Number
   },
   hasPaid: {
       type: Boolean

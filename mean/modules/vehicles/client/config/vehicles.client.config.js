@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular
+ /* angular
     .module('vehicles')
     .run(menuConfig);
 

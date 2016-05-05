@@ -4,180 +4,400 @@
   </div>
   <div class="col-md-12">
     <form name="userForm" ng-submit="update(userForm.$valid)" novalidate>
-      <fieldset>
-        <div class="row">
+            <fieldset>
+              
+              <div class="row">
 
-          <div class="col-md-6">
-            <div class="form-group" show-errors>
-              <label for="firstName">First Name</label>
-              <input type="text" id="firstName" name="firstName" class="form-control" ng-model="user.firstName" placeholder="First Name" required>
-              <div ng-messages="userForm.firstName.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">First name is required.</p>
+                <div class="col-md-12">
+                  <div class="form-group" show-errors>
+                    <label class="control-label" for="regnumber">Registration Number</label>
+                    <input name="regnumber" type="number" ng-model="user.registrationNumber" id="regnumber" class="form-control" placeholder="Registration Number" required>
+                    <!-- End Error Block -->
+                  </div>
+                  <!-- End Name -->
+                </div>
+                <!-- End Column -->
               </div>
-            </div> <!-- End Form Group -->
-          </div> <!-- End Column -->
+              <!-- End Row --> 
 
-          <div class="col-md-6">
-            <div class="form-group" show-errors>
-              <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" name="lastName" class="form-control" ng-model="user.lastName" placeholder="Last Name" required>
-              <div ng-messages="userForm.lastName.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">Last name is required.</p>
+              <div class="row">
+
+                <div class="col-md-6">
+                  <div class="form-group" show-errors>
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" class="form-control" ng-model="user.firstName" placeholder="First Name" required>
+                    <div ng-messages="userForm.firstName.$error" role="alert">
+                      <p class="help-block error-text" ng-message="required">First name is required.</p>
+                    </div>
+                  </div> <!-- End Form Group -->
+                </div> <!-- End Column -->
+
+                <div class="col-md-6">
+                  <div class="form-group" show-errors>
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" class="form-control" ng-model="user.lastName" placeholder="Last Name" required>
+                    <div ng-messages="userForm.lastName.$error" role="alert">
+                      <p class="help-block error-text" ng-message="required">Last name is required.</p>
+                    </div>
+                  </div> <!-- End Form Group -->
+                </div> <!-- End Column -->
+
+              </div> <!-- End Row -->
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group" show-errors>
+                    <label for="address">Address</label>
+                    <input type="address" id="address" name="address" class="form-control" ng-model="user.address" placeholder="Address">
+                    <div ng-messages="userForm.address.$error" role="alert">
+                      <p class="help-block error-text" ng-message="required">Address is required.</p>
+                      <p class="help-block error-text" ng-message="address">Address is invalid.</p>
+                    </div>
+                  </div>
+                </div> <!-- End Column -->
+              </div> <!-- End Row -->
+
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group" show-errors>
+                    <label for="city">City</label>
+                    <input type="city" id="city" name="city" class="form-control" ng-model="user.city" placeholder="City">
+                    <div ng-messages="userForm.city.$error" role="alert">
+                      <p class="help-block error-text" ng-message="required">City is required.</p>
+                      <p class="help-block error-text" ng-message="city">City is invalid.</p>
+                    </div>
+                  </div>
+                </div> <!-- End Column -->
+                <div class="col-md-4">
+                  <div class="form-group" show-errors>
+                    <label for="state">State</label>
+                    <select type="state" id="state" name="state" class="form-control" ng-model="user.state" placeholder="State">
+                      <option>Alabama</option>
+                      <option>Alaska</option>
+                      <option>Arizona</option>
+                      <option selected="selected">Arkansas</option>
+                      <option>California</option>
+                      <option>Colorado</option>
+                      <option>Connecticut</option>
+                      <option>Delaware</option>
+                      <option>Florida</option>
+                      <option>Georgia</option>
+                      <option>Hawaii</option>
+                      <option>Idaho</option>
+                      <option>Illinois</option>
+                      <option>Indiana</option>
+                      <option>Iowa</option>
+                      <option>Kansas</option>
+                      <option>Kentucky</option>
+                      <option>Louisiana</option>
+                      <option>Maine</option>
+                      <option>Maryland</option>
+                      <option>Massachusetts</option>
+                      <option>Michigan</option>
+                      <option>Minnesota</option>
+                      <option>Mississippi</option>
+                      <option>Missouri</option>
+                      <option>Montana</option>
+                      <option>Nebraska</option>
+                      <option>Nevada</option>
+                      <option>New Hampshire</option>
+                      <option>New Jersey</option>
+                      <option>New Mexico</option>
+                      <option>New York</option>
+                      <option>North Carolina</option>
+                      <option>North Dakota</option>
+                      <option>Ohio</option>
+                      <option>Oklahoma</option>
+                      <option>Oregon</option>
+                      <option>Pennsylvania</option>
+                      <option>Rhode Island</option>
+                      <option>South Carolina</option>
+                      <option>South Dakota</option>
+                      <option>Tennessee</option>
+                      <option>Texas</option>
+                      <option>Utah</option>
+                      <option>Vermont</option>
+                      <option>Virginia</option>
+                      <option>Washington</option>
+                      <option>West Virgina</option>
+                      <option>Wisconsin</option>
+                      <option>Wyoming</option>
+                    </select>
+                    <div ng-messages="userForm.state.$error" role="alert">
+                      <p class="help-block error-text" ng-message="required">State is required.</p>
+                      <p class="help-block error-text" ng-message="email">State is invalid.</p>
+                    </div>
+                  </div>
+                </div> <!-- End Column -->
+                <div class="col-md-4">
+                  <div class="form-group" show-errors>
+                    <label for="zipcode">Zip Code</label>
+                    <input type="zipcode" id="zipcode" name="zipcode" class="form-control" ng-model="user.zipcode" placeholder="Zip Code">
+                    <div ng-messages="userForm.zipcode.$error" role="alert">
+                      <p class="help-block error-text" ng-message="required">Zip Code is required.</p>
+                      <p class="help-block error-text" ng-message="email">Zip Code is invalid.</p>
+                    </div>
+                  </div>
+                </div> <!-- End Column -->
+              </div> <!-- End Row -->
+              
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group" show-errors>
+                    <label for="club">Club Affiliation</label>
+                    <input type="club" id="club" name="club" class="form-control" ng-model="user.club" placeholder="Club Name">
+                  </div>
+                </div> <!-- End Column -->
+              </div> <!-- End Row -->
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group" show-errors>
+                    <label for="phonenumber">Phone Number</label>
+                    <input type="phonenumber" id="phonenumber" name="phonenumber" class="form-control" ng-model="user.phonenumber" placeholder="ex. 1231231234">
+                    <div ng-messages="userForm.phonenumber.$error" role="alert">
+                      <p class="help-block error-text" ng-message="required">Phone Number is required.</p>
+                      <p class="help-block error-text" ng-message="email">Phone Number is invalid.</p>
+                    </div>
+                  </div>
+                </div> <!-- End Column -->
+                <div class="col-md-6">
+                  <div class="form-group" show-errors>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" ng-model="user.email" placeholder="Email" lowercase>
+                    <div ng-messages="userForm.email.$error" role="alert">
+                      <p class="help-block error-text" ng-message="required">Email address is required.</p>
+                      <p class="help-block error-text" ng-message="email">Email address is invalid.</p>
+                    </div>
+                  </div>
+                </div> <!-- End Column -->
+              </div> <!-- End Row -->
+              
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group" show-errors>
+                    <label for="econtact">Emmergency Contact</label>
+                    <input type="econtact" id="econtact" name="econtact" class="form-control" ng-model="user.emergencyContact" placeholder="Emergency Contact">
+                  </div>
+                </div> <!-- End Column -->
+              </div> <!-- End Row -->
+
+              <!--div class="row">
+                <div class="col-md-6">
+                  <input type="checkbox" data-ng-model="user.previouslyParticipated" value "">&nbsp Have they participated before?
+                </div> <!-- End Column 
+                <div class="col-md-6">
+                  <input type="checkbox" data-ng-model="user.postPictures" value="">&nbsp Can we post photos of their vehicles?
+                </div> <!-- End Column --
+              </div> <!-- End row -->
+              
+              <div class="section-title center">
+                <h2>
+                  <strong>Vehicle</strong>
+                </h2>
+                <div class="line">
+                  <hr>
+                </div>
+                <div class="clearfix"></div>
               </div>
-            </div> <!-- End Form Group -->
-          </div> <!-- End Column -->
 
-        </div> <!-- End Row -->
+              <div class="row">
+                <!--div class="col-md-6">
+                  <div class="form-group" show-errors>
+                    <!-- TODO This should really be a selection/context menu that defines the rest of the form 
+                    <label class="control-label" for="type">Vehicle Type</label>
+                    <input name="type" type="text" ng-model="user.type" id="type" class="form-control" placeholder="Type" required>
+                    <div ng-messages="user.form.user.type.$error" role="alert">
+                      <p class="help-block error-text" ng-message="required">Vehicle type is required.</p>
+                    </div>
+                    <!-- End Error Block
+                  </div>
+                  <!-- End Type 
+                </div>
+                <!-- End Column -->
+                <div class="col-md-4">
+                  <div class="form-group" show-errors>
+                    <label class="control-label" for="year">Vehicle Year</label>
+                    <input name="year" type="number" ng-model="user.year" id="year" class="form-control" placeholder="Year" required>
+                    <div ng-messages="userForm.year.$error" role="alert">
+                      <p class="help-block error-text" ng-message="required">Vehicle year is required.</p>
+                    </div>
+                    <!-- End Error Block -->
+                  </div>
+                  <!-- End Year -->
+                </div>
+                <!-- End Column -->
+              
+                <div class="col-md-4">
+                  <div class="form-group" show-errors>
+                    <label class="control-label" for="make">Vehicle Make</label>
+                    <input name="make" type="text" ng-model="user.make" id="make" class="form-control" placeholder="Make" required>
+                    <div ng-messages="userForm.make.$error" role="alert">
+                      <p class="help-block error-text" ng-message="required">Vehicle make is required.</p>
+                    </div>
+                  </div>
+                  <!-- End Make -->
+                </div>
+                <!-- End Column -->
+                <div class="col-md-4">
 
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group" show-errors>
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" class="form-control" ng-model="user.email" placeholder="Email" lowercase required>
-              <div ng-messages="userForm.email.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">Email address is required.</p>
-                <p class="help-block error-text" ng-message="email">Email address is invalid.</p>
+                  <div class="form-group" show-errors>
+                    <label class="control-label" for="model">Vehicle Model</label>
+                    <input name="model" type="text" ng-model="user.model" id="model" class="form-control" placeholder="Model" required>
+                    <div ng-messages="userForm.model.$error" role="alert">
+                      <p class="help-block error-text" ng-message="required">Vehicle model is required.</p>
+                    </div>
+                  </div>
+                  <!-- End Model -->
+                </div>
+                <!-- End Column -->
               </div>
-            </div>
-          </div> <!-- End Column -->
-          <div class="col-md-6">
-            <div class="form-group" show-errors>
-              <label for="phonenumber">Phone Number</label>
-              <input type="phonenumber" id="phonenumber" name="phonenumber" class="form-control" ng-model="user.phonenumber" placeholder="ex. 1231231234" required>
-              <div ng-messages="userForm.phonenumber.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">Phone Number is required.</p>
-                <p class="help-block error-text" ng-message="email">Phone Number is invalid.</p>
+              <!-- End Row -->
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group" show-errors>
+                    <label class="control-label" for="mods">Modifications</label>
+                    <input name="mods" type="text" ng-model="user.mods" id="mods" class="form-control" placeholder="Modifications"
+                      required>
+                    <div ng-messages="userForm.mods.$error" role="alert">
+                      <p class="help-block error-text" ng-message="required">Vehicle mods is required.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Column -->
+                <!-- End Modifications -->
+                <div class="col-md-6">
+
+                  <div class="form-group" show-errors>
+                    <label class="control-label" for="name">Entry Class</label>
+                    <select name="class" type="text" ng-model="user.class" id="name" class="form-control" required>
+                      <option>Mothers Only</option>
+                      <option>Cars Stock 1900-1971</option>
+                      <option>Cars Stock 1972-Present</option>
+                      <option>Cars Modified 1900-1971</option>
+                      <option>Cars Modified 1972-Present</option>
+                      <option>Cars Custom (All Years)</option>
+                      <option>Truck Stock 1900-1971</option>
+                      <option>Truck Stock 1972-Present</option>
+                      <option>Truck Modified 1900-1971</option>
+                      <option>Truck Modified 1972-Present</option>
+                      <option>4x4s</option>
+                      <option>Foreign Cars (All Years)</option>
+                      <option>Mustang</option>
+                      <option>Camaro</option>
+                      <option>Corvette</option>
+                      <option>Mopar Muscle</option>
+                      <option>Street Rod</option>
+                      <option>Tri-Fives</option>
+                      <option>Rat Rods</option>
+                      <option>Motorcycle Sport Bike</option>
+                      <option>Motorcycle Touring</option>
+                      <option>Motorcycle Custom</option>
+                    </select>
+                    <div ng-messages="userForm.class.$error" role="alert">
+                      <p class="help-block error-text" ng-message="required">Vehicle class is required.</p>
+                    </div>
+                  </div>
+                  <!-- End Class -->
+                </div>
+                <!-- End Column -->
               </div>
-            </div>
-          </div> <!-- End Column -->
-        </div> <!-- End Row -->
+              <!-- End Row -->             
+                      
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="checkbox" data-ng-model="user.hasPaid" checked="true" value="hasPaid">&nbsp Have they paid?
+                </div> <!-- End Column -->
+                <div class="col-md-6">
+                  <input type="checkbox" data-ng-model="user.preRegistered" value="">&nbsp pre-registered?
+                </div> <!-- End Column -->
+              </div> <!-- End row -->   
+              
+              </br>           
 
-        <div class="row">
-          <div class="col-md-12">
-            <div class="form-group" show-errors>
-              <label for="address">Address</label>
-              <input type="address" id="address" name="address" class="form-control" ng-model="user.address" placeholder="Address" required>
-              <div ng-messages="userForm.address.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">Address is required.</p>
-                <p class="help-block error-text" ng-message="address">Address is invalid.</p>
+              <div class="section-title center">
+                <h2>
+                  <strong>Judging</strong>
+                </h2>
+                <div class="line">
+                  <hr>
+                </div>
+                <div class="clearfix"></div>
               </div>
-            </div>
-          </div> <!-- End Column -->
-        </div> <!-- End Row -->
 
-        <div class="row">
-          <div class="col-md-4">
-            <div class="form-group" show-errors>
-              <label for="city">City</label>
-              <input type="city" id="city" name="city" class="form-control" ng-model="user.city" placeholder="City" required>
-              <div ng-messages="userForm.city.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">City is required.</p>
-                <p class="help-block error-text" ng-message="city">City is invalid.</p>
-              </div>
-            </div>
-          </div> <!-- End Column -->
-          <div class="col-md-4">
-            <div class="form-group" show-errors>
-              <label for="state">State</label>
-              <select type="state" id="state" name="state" class="form-control" ng-model="user.state" placeholder="State" required>
-                <option>Alabama</option>
-                <option>Alaska</option>
-                <option>Arizona</option>
-                <option selected="selected">Arkansas</option>
-                <option>California</option>
-                <option>Colorado</option>
-                <option>Connecticut</option>
-                <option>Delaware</option>
-                <option>Florida</option>
-                <option>Georgia</option>
-                <option>Hawaii</option>
-                <option>Idaho</option>
-                <option>Illinois</option>
-                <option>Indiana</option>
-                <option>Iowa</option>
-                <option>Kansas</option>
-                <option>Kentucky</option>
-                <option>Louisiana</option>
-                <option>Maine</option>
-                <option>Maryland</option>
-                <option>Massachusetts</option>
-                <option>Michigan</option>
-                <option>Minnesota</option>
-                <option>Mississippi</option>
-                <option>Missouri</option>
-                <option>Montana</option>
-                <option>Nebraska</option>
-                <option>Nevada</option>
-                <option>New Hampshire</option>
-                <option>New Jersey</option>
-                <option>New Mexico</option>
-                <option>New York</option>
-                <option>North Carolina</option>
-                <option>North Dakota</option>
-                <option>Ohio</option>
-                <option>Oklahoma</option>
-                <option>Oregon</option>
-                <option>Pennsylvania</option>
-                <option>Rhode Island</option>
-                <option>South Carolina</option>
-                <option>South Dakota</option>
-                <option>Tennessee</option>
-                <option>Texas</option>
-                <option>Utah</option>
-                <option>Vermont</option>
-                <option>Virginia</option>
-                <option>Washington</option>
-                <option>West Virgina</option>
-                <option>Wisconsin</option>
-                <option>Wyoming</option>
-              </select>
-              <div ng-messages="userForm.state.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">State is required.</p>
-                <p class="help-block error-text" ng-message="email">State is invalid.</p>
-              </div>
-            </div>
-          </div> <!-- End Column -->
-          <div class="col-md-4">
-            <div class="form-group" show-errors>
-              <label for="zipcode">Zip Code</label>
-              <input type="zipcode" id="zipcode" name="zipcode" class="form-control" ng-model="user.zipcode" placeholder="Zip Code" required>
-              <div ng-messages="userForm.zipcode.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">Zip Code is required.</p>
-                <p class="help-block error-text" ng-message="email">Zip Code is invalid.</p>
-              </div>
-            </div>
-          </div> <!-- End Column -->
-        </div> <!-- End Row -->
+              <div class="row">
+                <h4>Paint - Overall Paint Job</h4>
+                  <div ng-repeat="n in judgeCount">
+                    <div class="form-group col-md-2">
+                      <label class="control-label" for="judgepaint">Judge {{n+1}}</label></br>
+                      <input name="judgepaint" type="text" ng-model="user.judgepaint[n]" id="judgepaint" class="form-control">
+                    </div>
+                  </div>
+              </div> <!-- End Row --> 
+              <div class="row">
+                <h4>Body & Exterior Modifications</h4>
+                  <div ng-repeat="n in judgeCount">
+                    <div class="form-group col-md-2">
+                      <label class="control-label" for="judgeextmods">Judge {{n+1}}</label></br>
+                      <input name="judgeextmods" type="text" ng-model="user.judgeextmods[n]" id="judgeextmods" class="form-control">
+                    </div>
+                  </div>
+              </div> <!-- End Row -->
+              <div class="row">
+                <h4>Engine Modifications</h4> 
+                  <div ng-repeat="n in judgeCount">
+                    <div class="form-group col-md-2">
+                      <label class="control-label" for="judgeenginemods">Judge {{n+1}}</label></br>
+                      <input name="judgeenginemods" type="text" ng-model="user.judgeenginemods[n]" id="judgeenginemods" class="form-control">
+                    </div>
+                  </div>
+              </div> <!-- End Row -->  
+              <div class="row">
+                <h4>Suspension</h4> 
+                  <div ng-repeat="n in judgeCount">
+                    <div class="form-group col-md-2">
+                      <label class="control-label" for="judgesuspension">Judge {{n+1}}</label></br>
+                      <input name="judgesuspension" type="text" ng-model="user.judgesuspension[n]" id="judgesuspension" class="form-control">
+                    </div>
+                  </div>
+              </div> <!-- End Row -->  
+              <div class="row">
+                <h4>Wheels and tires</h4> 
+                  <div ng-repeat="n in judgeCount">
+                    <div class="form-group col-md-2">
+                      <label class="control-label" for="judgewheels">Judge {{n+1}}</label></br>
+                      <input name="judgewheels" type="text" ng-model="user.judgewheels[n]" id="judgewheels" class="form-control">
+                    </div>
+                  </div>
+              </div> <!-- End Row -->
+              <div class="row">
+                <h4>Interior Modifications</h4> 
+                  <div ng-repeat="n in judgeCount">
+                    <div class="form-group col-md-2">
+                      <label class="control-label" for="judgeinteriormods">Judge {{n+1}}</label></br>
+                      <input name="judgeinteriormods" type="text" ng-model="user.judgeinteriormods[n]" id="judgeinteriormods" class="form-control">
+                    </div>
+                  </div>
+              </div> <!-- End Row -->  
+              <div class="row">
+                <h4>Car Audio & Security System</h4> 
+                  <div ng-repeat="n in judgeCount">
+                    <div class="form-group col-md-2">
+                      <label class="control-label" for="judgeaudiosecurity">Judge {{n+1}}</label></br>
+                      <input name="judgeaudiosecurity" type="text" ng-model="user.judgeaudiosecurity[n]" id="judgeaudiosecurity" class="form-control">
+                    </div>
+                  </div>
+              </div> <!-- End Row -->
+              <div class="row">
+                <h4>Peoples Choice</h4> 
+                    <div class="form-group col-md-1">
+                      <label class="control-label" for="peoplechoice">Count</label>
+                      <input name="peoplechoice" type="text" ng-model="user.peoplechoice" id="peoplechoice" class="form-control">
+                    </div>
 
-        <div class="row">
-          <div class="col-md-12">
-            <div class="form-group" show-errors>
-              <label for="club">Club Affiliation</label>
-              <input type="club" id="club" name="club" class="form-control" ng-model="user.club" placeholder="Club Name">
-            </div>
-          </div> <!-- End Column -->
-        </div> <!-- End Row -->
-
-        <div class="row">
-          <div class="col-md-12">
-            <div class="form-group" show-errors>
-              <label for="role">Roles</label>
-              <input type="role" id="role" name="role" class="form-control" ng-model="user.roles" placeholder="User Roles">
-            </div>
-          </div> <!-- End Column -->
-        </div> <!-- End Row -->
-
-        <div class="row">
-          <div class="col-md-6">
-            <input type="checkbox" data-ng-model="user.previouslyParticipated" value "">&nbsp Have they previously participated?
-          </div> <!-- End Column -->
-          <div class="col-md-6">
-            <input type="checkbox" data-ng-model="user.postPictures" value="">&nbsp Can we post photos of their vehicles?
-          </div> <!-- End Column -->
-        </div> <!-- End row -->
-
-        </br>
-
+              </div> <!-- End Row -->    
+                
         <!--div class="form-group" ng-show="!userForm.password.$error.required">
           <label>Password Requirements</label>
           <progressbar value="requirementsProgress" type="{{requirementsColor}}"><span style="color:white; white-space:nowrap;">{{requirementsProgress}}%</span></progressbar>
