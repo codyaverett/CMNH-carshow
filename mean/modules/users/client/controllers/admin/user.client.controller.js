@@ -47,9 +47,10 @@ angular.module('users.admin').controller('UserController', ['$scope', '$state', 
       }).error(function (response) {
         $scope.error = response.message;
       });
-    };
+    };    
+  
+    var user = new Users($scope.user);
     
-    //var user = new Users($scope.user);
     $scope.update = function (isValid) {
       if (!isValid) {
         $scope.$broadcast('show-errors-check-validity', 'userForm');
@@ -62,10 +63,9 @@ angular.module('users.admin').controller('UserController', ['$scope', '$state', 
       console.log(user);
 
       user.$update(function () {
-        $state.go('admin.users', {
-          userId: user._id
-        });
+        $state.go('admin.users');
       }, function (errorResponse) {
+        console.log(errorResponse.data.message);
         $scope.error = errorResponse.data.message;
       });
     };

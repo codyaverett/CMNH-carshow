@@ -36,6 +36,10 @@ angular.module('users.admin.routes').config(['$stateProvider',
       .state('admin.user-create', {
         url: '/create',
         templateUrl: 'modules/users/client/views/admin/create-user.client.view.html'
+      })
+      .state('admin.status', {
+        url: '/status',
+        templateUrl: 'modules/users/client/views/admin/status.client.view.html'
       });
   }
 ]);

@@ -52,8 +52,7 @@ var UserSchema = new Schema({
   },
   email: {
     type: String,
-    trim: true,
-    default: '',
+    trim: true
     //validate: [validateLocalStrategyProperty, 'Please fill in your email'],
     //match: [/.+\@.+\..+/, 'Please fill a valid email address']
   },
@@ -79,23 +78,23 @@ var UserSchema = new Schema({
         return /\d{9}/.test(v);
       },
       message: '{VALUE} is not a valid phone number!'
-    },
+    }
     //required: [true, 'User phone number required']
   },
   address: {
-    type: String,
+    type: String
     //required: 'Please enter your Street Address'
   },
   city: {
-    type: String,
+    type: String
     //required: 'Please enter your City'
   },
   state: {
-    type: String,
+    type: String
     //required: 'Please choose your State'
   },
   zipcode: {
-    type: Number,
+    type: Number
     //required: 'Please enter you Zip Code'
   },
   club: {
@@ -133,30 +132,8 @@ var UserSchema = new Schema({
       required: 'Please fill in the Vehicle Mods'  
   },
   class: {
-     type: String,
-     enum: [  'Mothers Only',
-              'Cars Stock 1900-1971',
-              'Cars Stock 1972-Present',
-              'Cars Modified 1900-1971',
-              'Cars Modified 1972-Present',
-              'Cars Custom (All Years)',
-              'Truck Stock 1900-1971',
-              'Truck Stock 1972-Present',
-              'Truck Modified 1900-1971',
-              'Truck Modified 1972-Present',
-              '4x4s',
-              'Foreign Cars (All Years)',
-              'Mustang',
-              'Camaro',
-              'Corvette',
-              'Mopar Muscle',
-              'Street Rod',
-              'Tri-Fives',
-              'Rat Rods',
-              'Motorcycle Sport Bike',
-              'Motorcycle Touring',
-              'Motorcycle Custom'], 
-      required: 'Please choose a Vehicle Class'  
+     type: String, 
+     required: 'Please choose a Vehicle Class'  
   },
   judgepaint: {
     type: [{
@@ -201,8 +178,6 @@ var UserSchema = new Schema({
   },
   registrationNumber: {
     type: Number,
-    unique: true,
-    required: 'RegistrationNumber is required'
   },
   preRegistered: {
     type: Boolean

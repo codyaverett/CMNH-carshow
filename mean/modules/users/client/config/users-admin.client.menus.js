@@ -13,5 +13,10 @@ angular.module('users.admin').run(['Menus',
       state: 'admin.user-create'
     });
     
+    Menus.addSubMenuItem('topbar', 'admin', {
+      title: 'Show Status',
+      state: 'admin.status'
+    })
+    
   }
 ]);

@@ -164,7 +164,7 @@
                 <div class="col-md-6">
                   <div class="form-group" show-errors>
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" class="form-control" ng-model="user.email" placeholder="Email" lowercase>
+                    <input type="text" id="email" name="email" class="form-control" ng-model="user.email" placeholder="Email">
                     <div ng-messages="userForm.email.$error" role="alert">
                       <p class="help-block error-text" ng-message="required">Email address is required.</p>
                       <p class="help-block error-text" ng-message="email">Email address is invalid.</p>
@@ -331,16 +331,16 @@
                   <div ng-repeat="n in judgeCount">
                     <div class="form-group col-md-2">
                       <label class="control-label" for="judgepaint">Judge {{n+1}}</label></br>
-                      <input name="judgepaint" type="text" ng-model="user.judgepaint[n]" id="judgepaint" class="form-control">
+                      <input name="judgepaint" type="number" ng-model="user.judgepaint[n]" id="judgepaint" class="form-control">
                     </div>
                   </div>
-              </div> <!-- End Row --> 
+              </div> <!-- End Row -->
               <div class="row">
                 <h4>Body & Exterior Modifications</h4>
                   <div ng-repeat="n in judgeCount">
                     <div class="form-group col-md-2">
                       <label class="control-label" for="judgeextmods">Judge {{n+1}}</label></br>
-                      <input name="judgeextmods" type="text" ng-model="user.judgeextmods[n]" id="judgeextmods" class="form-control">
+                      <input name="judgeextmods" type="number" ng-model="user.judgeextmods[n]" id="judgeextmods" class="form-control">
                     </div>
                   </div>
               </div> <!-- End Row -->
@@ -349,25 +349,25 @@
                   <div ng-repeat="n in judgeCount">
                     <div class="form-group col-md-2">
                       <label class="control-label" for="judgeenginemods">Judge {{n+1}}</label></br>
-                      <input name="judgeenginemods" type="text" ng-model="user.judgeenginemods[n]" id="judgeenginemods" class="form-control">
+                      <input name="judgeenginemods" type="number" ng-model="user.judgeenginemods[n]" id="judgeenginemods" class="form-control">
                     </div>
                   </div>
-              </div> <!-- End Row -->  
+              </div> <!-- End Row -->
               <div class="row">
                 <h4>Suspension</h4> 
                   <div ng-repeat="n in judgeCount">
                     <div class="form-group col-md-2">
                       <label class="control-label" for="judgesuspension">Judge {{n+1}}</label></br>
-                      <input name="judgesuspension" type="text" ng-model="user.judgesuspension[n]" id="judgesuspension" class="form-control">
+                      <input name="judgesuspension" type="number" ng-model="user.judgesuspension[n]" id="judgesuspension" class="form-control">
                     </div>
                   </div>
-              </div> <!-- End Row -->  
+              </div> <!-- End Row -->
               <div class="row">
                 <h4>Wheels and tires</h4> 
                   <div ng-repeat="n in judgeCount">
                     <div class="form-group col-md-2">
                       <label class="control-label" for="judgewheels">Judge {{n+1}}</label></br>
-                      <input name="judgewheels" type="text" ng-model="user.judgewheels[n]" id="judgewheels" class="form-control">
+                      <input name="judgewheels" type="number" ng-model="user.judgewheels[n]" id="judgewheels" class="form-control">
                     </div>
                   </div>
               </div> <!-- End Row -->
@@ -376,16 +376,16 @@
                   <div ng-repeat="n in judgeCount">
                     <div class="form-group col-md-2">
                       <label class="control-label" for="judgeinteriormods">Judge {{n+1}}</label></br>
-                      <input name="judgeinteriormods" type="text" ng-model="user.judgeinteriormods[n]" id="judgeinteriormods" class="form-control">
+                      <input name="judgeinteriormods" type="number" ng-model="user.judgeinteriormods[n]" id="judgeinteriormods" class="form-control">
                     </div>
                   </div>
-              </div> <!-- End Row -->  
+              </div> <!-- End Row -->
               <div class="row">
                 <h4>Car Audio & Security System</h4> 
                   <div ng-repeat="n in judgeCount">
                     <div class="form-group col-md-2">
                       <label class="control-label" for="judgeaudiosecurity">Judge {{n+1}}</label></br>
-                      <input name="judgeaudiosecurity" type="text" ng-model="user.judgeaudiosecurity[n]" id="judgeaudiosecurity" class="form-control">
+                      <input name="judgeaudiosecurity" type="number" ng-model="user.judgeaudiosecurity[n]" id="judgeaudiosecurity" class="form-control">
                     </div>
                   </div>
               </div> <!-- End Row -->
@@ -393,7 +393,7 @@
                 <h4>Peoples Choice</h4> 
                     <div class="form-group col-md-1">
                       <label class="control-label" for="peoplechoice">Count</label>
-                      <input name="peoplechoice" type="text" ng-model="user.peoplechoice" id="peoplechoice" class="form-control">
+                      <input name="peoplechoice" type="number" ng-model="user.peoplechoice" id="peoplechoice" class="form-control">
                     </div>
 
               </div> <!-- End Row -->    
