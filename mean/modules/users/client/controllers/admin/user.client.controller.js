@@ -5,9 +5,7 @@ angular.module('users.admin').controller('UserController', ['$scope', '$state', 
     $scope.authentication = Authentication;
     $scope.user = userResolve;
     
-    $scope.judgeCount = [0,1,2,3,4];
-    
-    console.log($scope.user);
+    $scope.judgeCount = [0,1,2];
     //$scope.vehicles = VehiclesService.query(); //get vehicle data//This was used for showing Vehicle data on the user screens
 
     //console.log($scope.user); I hate this project, so much.  Scrapping it for next year

@@ -9,8 +9,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$stat
     $scope.error = $location.search().err;
     $scope.isDataEntry = Authentication.isDataEntry;
     $scope.generateUsername = Authentication.generateUsername;
-    $scope.credentials.hasPaid = true;
-
+    
     // If user is signed in then redirect back home
     if ($scope.authentication.user && !$scope.isDataEntry() ) {
       $location.path('/');
