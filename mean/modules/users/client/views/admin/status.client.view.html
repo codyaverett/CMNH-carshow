@@ -1,4 +1,4 @@
-<section data-ng-controller="AuthenticationController">
+<section data-ng-controller="ReportsController" ng-init="init()">
   <div id="tf-contact" class="text-center">
     <div class="container">
 
@@ -15,10 +15,11 @@
             <div class="clearfix"></div>
           </div>
 
-            Current Registered Count: {{ pagedItems.count() }}
+            Current Registered Count: {{ user }}
             
             </hr>
 
+            <!--Foreach populate the classes -->
             <h4>Mother's Only</h4>
             <h4>Cars Stock 1900-1971</h4>
             <h4>Cars Stock 1972-Present</h4>
