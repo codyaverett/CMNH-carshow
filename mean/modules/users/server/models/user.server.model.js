@@ -225,8 +225,8 @@ var UserSchema = new Schema({
       type: Boolean
   },
   registrationNumber: {
-    type: Number
-    //unique: 'testing error message'
+    type: Number,
+    unique: 'testing error message'
   },
   preRegistered: {
     type: Boolean
