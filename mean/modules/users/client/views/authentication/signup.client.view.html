@@ -44,7 +44,7 @@
                 <div class="col-md-6">
                   <div class="form-group" show-errors>
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" class="form-control" ng-model="credentials.email" placeholder="Email" lowercase required>
+                    <input type="email" id="email" name="email" class="form-control" ng-model="credentials.email" placeholder="Email" lowercase >
                     <div ng-messages="userForm.email.$error" role="alert">
                       <p class="help-block error-text" ng-message="required">Email address is required.</p>
                       <p class="help-block error-text" ng-message="email">Email address is invalid.</p>
@@ -54,7 +54,7 @@
                 <div class="col-md-6">
                   <div class="form-group" show-errors>
                     <label for="phonenumber">Phone Number</label>
-                    <input type="phonenumber" id="phonenumber" name="phonenumber" class="form-control" ng-model="credentials.phonenumber" placeholder="ex. 1231231234" required>
+                    <input type="phonenumber" id="phonenumber" name="phonenumber" class="form-control" ng-model="credentials.phonenumber" placeholder="ex. 1231231234" >
                     <div ng-messages="userForm.phonenumber.$error" role="alert">
                       <p class="help-block error-text" ng-message="required">Phone Number is required.</p>
                       <p class="help-block error-text" ng-message="email">Phone Number is invalid.</p>
@@ -67,7 +67,7 @@
                 <div class="col-md-12">
                   <div class="form-group" show-errors>
                     <label for="address">Address</label>
-                    <input type="address" id="address" name="address" class="form-control" ng-model="credentials.address" placeholder="Address" lowercase required>
+                    <input type="address" id="address" name="address" class="form-control" ng-model="credentials.address" placeholder="Address" lowercase >
                     <div ng-messages="userForm.address.$error" role="alert">
                       <p class="help-block error-text" ng-message="required">Address is required.</p>
                       <p class="help-block error-text" ng-message="address">Address is invalid.</p>
@@ -80,7 +80,7 @@
                 <div class="col-md-4">
                   <div class="form-group" show-errors>
                     <label for="city">City</label>
-                    <input type="city" id="city" name="city" class="form-control" ng-model="credentials.city" placeholder="City" required>
+                    <input type="city" id="city" name="city" class="form-control" ng-model="credentials.city" placeholder="City" >
                     <div ng-messages="userForm.city.$error" role="alert">
                       <p class="help-block error-text" ng-message="required">City is required.</p>
                       <p class="help-block error-text" ng-message="city">City is invalid.</p>
@@ -90,7 +90,7 @@
                 <div class="col-md-4">
                   <div class="form-group" show-errors>
                     <label for="state">State</label>
-                      <select type="state" id="state" name="state" class="form-control" ng-model="credentials.state" placeholder="State" required>
+                      <select type="state" id="state" name="state" class="form-control" ng-model="credentials.state" placeholder="State" >
                         <option>Alabama</option>
                         <option>Alaska</option>
                         <option>Arizona</option>
@@ -151,7 +151,7 @@
                 <div class="col-md-4">
                   <div class="form-group" show-errors>
                     <label for="zipcode">Zip Code</label>
-                    <input type="zipcode" id="zipcode" name="zipcode" class="form-control" ng-model="credentials.zipcode" placeholder="Zip Code" required>
+                    <input type="zipcode" id="zipcode" name="zipcode" class="form-control" ng-model="credentials.zipcode" placeholder="Zip Code" >
                     <div ng-messages="userForm.zipcode.$error" role="alert">
                       <p class="help-block error-text" ng-message="required">Zip Code is required.</p>
                       <p class="help-block error-text" ng-message="email">Zip Code is invalid.</p>
@@ -189,7 +189,7 @@
               </div>
               <div class="form-group" show-errors>
                 <label for="password">Password</label>
-                  <input type="password" id="password" name="password" class="form-control" ng-model="credentials.password" placeholder="Password" popover="{{popoverMsg}}" popover-trigger="focus" password-validator required>
+                  <input type="password" id="password" name="password" class="form-control" ng-model="credentials.password" placeholder="Password" popover="{{popoverMsg}}" popover-trigger="focus" required>
                 <div ng-messages="userForm.password.$error" role="alert">
                   <p class="help-block error-text" ng-message="required">Password is required.</p>
                   <div ng-repeat="passwordError in passwordErrors">

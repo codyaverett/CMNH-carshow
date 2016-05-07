@@ -8,7 +8,9 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$stat
     // Get an eventual error defined in the URL query string:
     $scope.error = $location.search().err;
     $scope.isDataEntry = Authentication.isDataEntry;
-    $scope.generateUsername = Authentication.generateUsername;
+    
+    if( $scope.isDataEntry )
+       $scope.generateUsername = Authentication.generateUsername;
     
     // If user is signed in then redirect back home
     if ($scope.authentication.user && !$scope.isDataEntry() ) {
@@ -24,7 +26,8 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$stat
         return false;
       }
 
-      $scope.credentials.username = $scope.generateUsername();
+      if ($scope.isDataEntry)
+        $scope.credentials.username = $scope.generateUsername();
 
       $scope.credentials.judgepaint = [0,0,0,0,0];
       $scope.credentials.judgeextmods = [0,0,0,0,0];
