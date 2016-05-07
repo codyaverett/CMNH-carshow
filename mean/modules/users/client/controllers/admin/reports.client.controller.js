@@ -15,13 +15,7 @@ angular.module('users.admin').controller('ReportsController', ['$scope', '$filte
             $scope.users = data;
             
             $scope.users.forEach(function(current){
-                console.log(current.registrationNumber);
-                console.log(current.year);
-                console.log(current.make);
-                console.log(current.model);
-                console.log(current.class);                
-                console.log($scope.getTotalPoints(current));
-                console.log("===================")
+                console.log(current.registrationNumber + ":" + current.year + ":" + current.make + ":" + current.model + ":" + current.class + ":" + $scope.getTotalPoints(current));            
             });
             
             for(var i = 0; i <= 22; i++){
