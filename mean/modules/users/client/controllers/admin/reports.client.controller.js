@@ -114,9 +114,9 @@ angular.module('users.admin').controller('ReportsController', ['$scope', '$filte
         
     };
     
-    $scope.getTop = function( howMany, elements ) {
+    $scope.getTop = function( howMany, elements, what ) {
 
-        elements.sort($scope.sort_by('totalPoints', true, parseInt));
+        elements.sort($scope.sort_by(what, true, parseInt));
         
         var ret = [];
         for(var i = 0; i < howMany; i++){
@@ -153,7 +153,7 @@ angular.module('users.admin').controller('ReportsController', ['$scope', '$filte
                 matches.push(currentEntry);
             }
         });
-        $scope.getTop(1, matches);
+        $scope.getTop(1, matches, "peopleChoice");
         $scope.misc.bestMotorcyclePeople = matches[0];
         
         matches = [];
@@ -163,7 +163,7 @@ angular.module('users.admin').controller('ReportsController', ['$scope', '$filte
                 matches.push(currentEntry);
             }
         });
-        $scope.getTop(1, matches);
+        $scope.getTop(1, matches, "peopleChoice");
         $scope.misc.bestCarTruckPeople = matches[0];
  
         console.log("Best Car/Truck Peoples Choice!!");
@@ -184,7 +184,7 @@ angular.module('users.admin').controller('ReportsController', ['$scope', '$filte
                 matches.push(currentEntry);
             }
         });
-        $scope.getTop(1, matches);
+        $scope.getTop(1, matches, "totalPoints");
         $scope.misc.bestMotorcycle = matches[0];
         
         
@@ -196,7 +196,7 @@ angular.module('users.admin').controller('ReportsController', ['$scope', '$filte
                 matches.push(currentEntry);
             }
         });
-        $scope.getTop(1, matches);
+        $scope.getTop(1, matches, "totalPoints");
         $scope.misc.bestCarTruck = matches[0];
 
        console.log("Best Car/Truck!!");
