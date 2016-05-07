@@ -38,7 +38,7 @@ angular.module('users').factory('Classes',
                         return i;
                     } 
                 }
-                console.log("Could not correlate class number");
+                console.log("Could not correlate class number " + textIdentifier);
             };
         
         return {
