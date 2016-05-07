@@ -34,7 +34,7 @@ angular.module('users.admin').controller('ReportsController', ['$scope', '$filte
     }
     
     $scope.getUsersForThisBucket = function( classID ) {
-        console.log("Sorting Data");
+        //console.log("Sorting Data");
         
         var matches = [];
         
@@ -47,7 +47,7 @@ angular.module('users.admin').controller('ReportsController', ['$scope', '$filte
         });
         
         if(matches.length > 0) {
-            console.log("Found Some...");
+            //console.log("Found Some...");
             //console.log(matches);
         }
         
@@ -170,10 +170,10 @@ angular.module('users.admin').controller('ReportsController', ['$scope', '$filte
         $scope.getTop(1, matches, "peoplechoice");
         $scope.misc.bestCarTruckPeople = matches[0];
  
-        console.log("Best Car/Truck Peoples Choice!!");
-        console.log($scope.misc.bestCarTruckPeople);
-        console.log("Best Motorcycle Peoples Choice!!") 
-        console.log($scope.misc.bestMotorcyclePeople);
+        //console.log("Best Car/Truck Peoples Choice!!");
+        //console.log($scope.misc.bestCarTruckPeople);
+        //console.log("Best Motorcycle Peoples Choice!!") 
+        //console.log($scope.misc.bestMotorcyclePeople);
  
     }
     
@@ -203,10 +203,10 @@ angular.module('users.admin').controller('ReportsController', ['$scope', '$filte
         $scope.getTop(1, matches, "totalPoints");
         $scope.misc.bestCarTruck = matches[0];
 
-       console.log("Best Car/Truck!!");
+       /*console.log("Best Car/Truck!!");
        console.log($scope.misc.bestCarTruck);
        console.log("Best Motorcycle!!") 
-       console.log($scope.misc.bestMotorcycle);
+       console.log($scope.misc.bestMotorcycle);*/
     }
     
     $scope.getBestClub = function() {
