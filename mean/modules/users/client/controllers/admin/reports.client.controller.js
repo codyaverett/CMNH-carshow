@@ -153,7 +153,7 @@ angular.module('users.admin').controller('ReportsController', ['$scope', '$filte
                 matches.push(currentEntry);
             }
         });
-        $scope.getTop(1, matches, "peopleChoice");
+        $scope.getTop(1, matches, "peoplechoice");
         $scope.misc.bestMotorcyclePeople = matches[0];
         
         matches = [];
@@ -163,7 +163,7 @@ angular.module('users.admin').controller('ReportsController', ['$scope', '$filte
                 matches.push(currentEntry);
             }
         });
-        $scope.getTop(1, matches, "peopleChoice");
+        $scope.getTop(1, matches, "peoplechoice");
         $scope.misc.bestCarTruckPeople = matches[0];
  
         console.log("Best Car/Truck Peoples Choice!!");
