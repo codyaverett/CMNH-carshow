@@ -142,7 +142,7 @@
                 <div class="col-md-4">
                   <div class="form-group" show-errors>
                     <label for="zipcode">Zip Code</label>
-                    <input type="zipcode" id="zipcode" name="zipcode" class="form-control" ng-model="credentials.zipcode" placeholder="Zip Code">
+                    <input type="zipcode" id="zipcode" name="zipcode" class="form-control" ng-model="credentials.zip" placeholder="Zip Code">
                     <div ng-messages="userForm.zipcode.$error" role="alert">
                       <p class="help-block error-text" ng-message="required">Zip Code is required.</p>
                       <p class="help-block error-text" ng-message="email">Zip Code is invalid.</p>
@@ -155,7 +155,7 @@
                 <div class="col-md-12">
                   <div class="form-group" show-errors>
                     <label for="club">Club Affiliation</label>
-                    <input type="club" id="club" name="club" class="form-control" ng-model="credentials.club" placeholder="Club Name">
+                    <input type="club" id="club" name="club" class="form-control" ng-model="credentials.clubAffiliation" placeholder="Club Name">
                   </div>
                 </div> <!-- End Column -->
               </div> <!-- End Row -->
@@ -164,7 +164,7 @@
                 <div class="col-md-6">
                   <div class="form-group" show-errors>
                     <label for="phonenumber">Phone Number</label>
-                    <input type="phonenumber" id="phonenumber" name="phonenumber" class="form-control" ng-model="credentials.phonenumber" placeholder="ex. 1231231234">
+                    <input type="phonenumber" id="phonenumber" name="phonenumber" class="form-control" ng-model="credentials.phoneNumber" placeholder="ex. 1231231234">
                     <div ng-messages="userForm.phonenumber.$error" role="alert">
                       <p class="help-block error-text" ng-message="required">Phone Number is required.</p>
                       <p class="help-block error-text" ng-message="email">Phone Number is invalid.</p>

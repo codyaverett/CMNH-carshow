@@ -14,7 +14,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$stat
     if ($scope.authentication.user && !$scope.isDataEntry() ) {
       $location.path('/');
     }
-    
+     
     $scope.signup = function (isValid) {
       $scope.error = null;
 
