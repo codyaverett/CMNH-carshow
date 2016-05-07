@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('users').controller('AuthenticationController', ['$scope', '$state', '$http', '$location', '$window', 'Authentication', 'PasswordValidator',
-  function ($scope, $state, $http, $location, $window, Authentication, PasswordValidator) {
+angular.module('users').controller('AuthenticationController', ['$scope', '$state', '$http', '$location', '$window', 'Authentication', 'PasswordValidator', 'Classes',
+  function ($scope, $state, $http, $location, $window, Authentication, PasswordValidator, Classes) {
     $scope.authentication = Authentication;
     $scope.popoverMsg = PasswordValidator.getPopoverMsg();
 
@@ -25,6 +25,17 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$stat
       }
 
       $scope.credentials.username = $scope.generateUsername();
+
+      $scope.credentials.judgepaint = [0,0,0,0,0];
+      $scope.credentials.judgeextmods = [0,0,0,0,0];
+      $scope.credentials.judgeenginemods = [0,0,0,0,0];
+      $scope.credentials.judgesuspension = [0,0,0,0,0];
+      $scope.credentials.judgewheels = [0,0,0,0,0];
+      $scope.credentials.judgeinteriormods = [0,0,0,0,0];
+      $scope.credentials.judgeaudiosecurity = [0,0,0,0,0];
+      $scope.credentials.peoplechoice = 0;
+
+      $scope.credentials.classID = Classes.getClassNumber($scope.credentials.class);
 
       $http.post('/api/auth/signup', $scope.credentials).success(function (response) {
         // If successful we assign the response to the global user model

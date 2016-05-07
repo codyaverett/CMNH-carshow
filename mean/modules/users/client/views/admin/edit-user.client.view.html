@@ -271,7 +271,7 @@
 
                   <div class="form-group" show-errors>
                     <label class="control-label" for="name">Entry Class</label>
-                    <select name="class" type="text" ng-model="user.class" id="name" class="form-control" required>
+                    <select name="class" type="text" ng-model="user.class" id="name" class="form-control" ng-change="toggle(user.class)" required>
                       <option>Mothers Only (Car or Truck)</option>
                       <option>Mothers Only (Motorcycle)</option>
                       <option>Cars Stock 1900-1971</option>
@@ -319,16 +319,17 @@
 
               <div class="section-title center">
                 <h2>
-                  <strong>Judging</strong>
+                  <strong>Judging <span ng-show="togIsMotorcycle"> - Motorcycles</span> <span ng-hide="togIsMotorcycle"> - Cars/Trucks</span></strong>
                 </h2>
                 <div class="line">
                   <hr>
                 </div>
                 <div class="clearfix"></div>
               </div>
-
+              
+<div ng-hide="togIsMotorcycle">
               <div class="row">
-                <h4>Paint - Overall Paint Job</h4>
+                <h4>{{judges.strings.carstrucks[0]}}</h4>
                   <div ng-repeat="n in judgeCount">
                     <div class="form-group col-md-2">
                       <label class="control-label" for="judgepaint">Judge {{n+1}}</label></br>
@@ -337,7 +338,7 @@
                   </div>
               </div> <!-- End Row -->
               <div class="row">
-                <h4>Body & Exterior Modifications</h4>
+                <h4>{{judges.strings.carstrucks[1]}}</h4>
                   <div ng-repeat="n in judgeCount">
                     <div class="form-group col-md-2">
                       <label class="control-label" for="judgeextmods">Judge {{n+1}}</label></br>
@@ -346,7 +347,7 @@
                   </div>
               </div> <!-- End Row -->
               <div class="row">
-                <h4>Engine Modifications</h4> 
+                <h4>{{judges.strings.carstrucks[2]}}</h4> 
                   <div ng-repeat="n in judgeCount">
                     <div class="form-group col-md-2">
                       <label class="control-label" for="judgeenginemods">Judge {{n+1}}</label></br>
@@ -355,7 +356,7 @@
                   </div>
               </div> <!-- End Row -->
               <div class="row">
-                <h4>Suspension</h4> 
+                <h4>{{judges.strings.carstrucks[3]}}</h4> 
                   <div ng-repeat="n in judgeCount">
                     <div class="form-group col-md-2">
                       <label class="control-label" for="judgesuspension">Judge {{n+1}}</label></br>
@@ -364,7 +365,7 @@
                   </div>
               </div> <!-- End Row -->
               <div class="row">
-                <h4>Wheels and tires</h4> 
+                <h4>{{judges.strings.carstrucks[4]}}</h4> 
                   <div ng-repeat="n in judgeCount">
                     <div class="form-group col-md-2">
                       <label class="control-label" for="judgewheels">Judge {{n+1}}</label></br>
@@ -373,7 +374,7 @@
                   </div>
               </div> <!-- End Row -->
               <div class="row">
-                <h4>Interior Modifications</h4> 
+                <h4>{{judges.strings.carstrucks[5]}}</h4> 
                   <div ng-repeat="n in judgeCount">
                     <div class="form-group col-md-2">
                       <label class="control-label" for="judgeinteriormods">Judge {{n+1}}</label></br>
@@ -382,14 +383,100 @@
                   </div>
               </div> <!-- End Row -->
               <div class="row">
-                <h4>Car Audio & Security System</h4> 
+                <h4>{{judges.strings.carstrucks[6]}}</h4> 
                   <div ng-repeat="n in judgeCount">
                     <div class="form-group col-md-2">
-                      <label class="control-label" for="judgeaudiosecurity">Judge {{n+1}}</label></br>
-                      <input name="judgeaudiosecurity" type="number" ng-model="user.judgeaudiosecurity[n]" id="judgeaudiosecurity" class="form-control">
+                      <label class="control-label" for="judgelamps">Judge {{n+1}}</label></br>
+                      <input name="judgelamps" type="number" ng-model="user.judgelamps[n]" id="judgelamps" class="form-control">
                     </div>
                   </div>
               </div> <!-- End Row -->
+              <div class="row">
+                <h4>{{judges.strings.carstrucks[7]}}</h4> 
+                  <div ng-repeat="n in judgeCount">
+                    <div class="form-group col-md-2">
+                      <label class="control-label" for="judgesaftey">Judge {{n+1}}</label></br>
+                      <input name="judgesaftey" type="number" ng-model="user.judgesaftey[n]" id="judgesaftey" class="form-control">
+                    </div>
+                  </div>
+              </div> <!-- End Row -->  
+</div>              
+<div ng-show="togIsMotorcycle">
+              <div class="row">
+                <h4>{{judges.strings.motorcycles[0]}}</h4>
+                  <div ng-repeat="n in judgeCount">
+                    <div class="form-group col-md-2">
+                      <label class="control-label" for="bjudgeoriginality">Judge {{n+1}}</label></br>
+                      <input name="bjudgeoriginality" type="number" ng-model="user.bjudgeoriginality[n]" id="bjudgeoriginality" class="form-control">
+                    </div>
+                  </div>
+              </div> <!-- End Row -->
+              <div class="row">
+                <h4>{{judges.strings.motorcycles[1]}}</h4>
+                  <div ng-repeat="n in judgeCount">
+                    <div class="form-group col-md-2">
+                      <label class="control-label" for="bjudgewheels">Judge {{n+1}}</label></br>
+                      <input name="bjudgewheels" type="number" ng-model="user.bjudgewheels[n]" id="bjudgewheels" class="form-control">
+                    </div>
+                  </div>
+              </div> <!-- End Row -->
+              <div class="row">
+                <h4>{{judges.strings.motorcycles[2]}}</h4> 
+                  <div ng-repeat="n in judgeCount">
+                    <div class="form-group col-md-2">
+                      <label class="control-label" for="bjudgepaint">Judge {{n+1}}</label></br>
+                      <input name="bjudgepaint" type="number" ng-model="user.bjudgepaint[n]" id="bjudgepaint" class="form-control">
+                    </div>
+                  </div>
+              </div> <!-- End Row -->
+              <div class="row">
+                <h4>{{judges.strings.motorcycles[3]}}</h4> 
+                  <div ng-repeat="n in judgeCount">
+                    <div class="form-group col-md-2">
+                      <label class="control-label" for="bjudgeplating">Judge {{n+1}}</label></br>
+                      <input name="bjudgeplating" type="number" ng-model="user.bjudgeplating[n]" id="bjudgeplating" class="form-control">
+                    </div>
+                  </div>
+              </div> <!-- End Row -->
+              <div class="row">
+                <h4>{{judges.strings.motorcycles[4]}}</h4> 
+                  <div ng-repeat="n in judgeCount">
+                    <div class="form-group col-md-2">
+                      <label class="control-label" for="bjudgeelectrical">Judge {{n+1}}</label></br>
+                      <input name="bjudgeelectrical" type="number" ng-model="user.bjudgeelectrical[n]" id="bjudgeelectrical" class="form-control">
+                    </div>
+                  </div>
+              </div> <!-- End Row -->
+              <div class="row">
+                <h4>{{judges.strings.motorcycles[5]}}</h4> 
+                  <div ng-repeat="n in judgeCount">
+                    <div class="form-group col-md-2">
+                      <label class="control-label" for="bjudgecontrols">Judge {{n+1}}</label></br>
+                      <input name="bjudgecontrols" type="number" ng-model="user.bjudgecontrols[n]" id="bjudgecontrols" class="form-control">
+                    </div>
+                  </div>
+              </div> <!-- End Row -->
+              <div class="row">
+                <h4>{{judges.strings.motorcycles[6]}}</h4> 
+                  <div ng-repeat="n in judgeCount">
+                    <div class="form-group col-md-2">
+                      <label class="control-label" for="bjudgecleanliness">Judge {{n+1}}</label></br>
+                      <input name="bjudgecleanliness" type="number" ng-model="user.bjudgecleanliness[n]" id="bjudgecleanliness" class="form-control">
+                    </div>
+                  </div>
+              </div> <!-- End Row -->
+              <div class="row">
+              <h4>{{judges.strings.motorcycles[7]}}</h4> 
+                  <div ng-repeat="n in judgeCount">
+                    <div class="form-group col-md-2">
+                      <label class="control-label" for="bjudgetransmission">Judge {{n+1}}</label></br>
+                      <input name="bjudgetransmission" type="number" ng-model="user.bjudgetransmission[n]" id="bjudgetransmission" class="form-control">
+                    </div>
+                  </div>
+              </div> <!-- End Row -->    
+</div>              
+              
+                          
               <div class="row">
                 <h4>Peoples Choice</h4> 
                     <div class="form-group col-md-1">
@@ -403,15 +490,16 @@
           <label>Password Requirements</label>
           <progressbar value="requirementsProgress" type="{{requirementsColor}}"><span style="color:white; white-space:nowrap;">{{requirementsProgress}}%</span></progressbar>
         </div-->
-        <div class="text-center form-group">
-          <input type="submit" value="Update" class="btn btn-default">
+        <div ng-show="error" class="text-center text-danger">
+          <strong ng-bind="error"></strong>
         </div>
         <div ng-show="success" class="text-center text-success">
           <strong>Profile Saved Successfully</strong>
         </div>
-        <div ng-show="error" class="text-center text-danger">
-          <strong ng-bind="error"></strong>
+        <div class="text-center form-group">
+          <input type="submit" value="Update" class="btn btn-default">
         </div>
+
       </fieldset>
     </form>
   </div>

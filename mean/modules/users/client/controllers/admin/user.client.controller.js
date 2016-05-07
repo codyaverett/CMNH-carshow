@@ -1,13 +1,24 @@
 'use strict';
 
-angular.module('users.admin').controller('UserController', ['$scope', '$state', 'Authentication', 'Users', 'userResolve',
-  function ($scope, $state, Authentication, Users, userResolve) {
+angular.module('users.admin').controller('UserController', ['$scope', '$state', 'Authentication', 'Users', 'userResolve', 'Classes', 'Judges',
+  function ($scope, $state, Authentication, Users, userResolve, Classes, Judges) {
     $scope.authentication = Authentication;
     $scope.user = userResolve;
     
-    $scope.judgeCount = [0,1,2];
+    $scope.judgeCount = [0,1,2]; //How many judges
     //$scope.vehicles = VehiclesService.query(); //get vehicle data//This was used for showing Vehicle data on the user screens
     
+    $scope.judges = Judges;
+
+    $scope.togIsMotorcycle = $scope.judges.isMotorcycle($scope.user.class);
+
+    $scope.toggle = function( input ) {
+      //console.log(input);
+      //console.log($scope.judges.isMotorcycle(input));
+      //console.log($scope.judges.isCarOrisTruck(input));
+      $scope.togIsMotorcycle = $scope.judges.isMotorcycle(input);
+    };
+            
     $scope.remove = function (user) {
       if (confirm('Are you sure you want to delete this user?')) {
         if (user) {
@@ -25,17 +36,6 @@ angular.module('users.admin').controller('UserController', ['$scope', '$state', 
     $scope.signup = function (isValid) {
       $scope.error = null;
       
-      console.log("clicking>>?");
-      
-      $scope.user.judgepaint = [0,0,0,0,0];
-      $scope.user.judgeextmods = [0,0,0,0,0];
-      $scope.user.judgeenginemods = [0,0,0,0,0];
-      $scope.user.judgesuspension = [0,0,0,0,0];
-      $scope.user.judgewheels = [0,0,0,0,0];
-      $scope.user.judgeinteriormods = [0,0,0,0,0];
-      $scope.user.judgeaudiosecurity = [0,0,0,0,0];
-      $scope.user.peoplechoice = 0;
-
       $http.post('/api/auth/signup', $scope.credentials).success(function (response) {
 
         // And redirect to the previous or home page
@@ -56,7 +56,7 @@ angular.module('users.admin').controller('UserController', ['$scope', '$state', 
 
       var user = $scope.user;
 
-      console.log(user);
+      $scope.user.classID = Classes.getClassNumber($scope.user.class);
 
       user.$update(function () {
         $state.go('admin.users');

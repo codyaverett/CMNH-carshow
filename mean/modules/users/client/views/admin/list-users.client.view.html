@@ -7,11 +7,16 @@
       <div class="col-md-4" style="margin-top: 2em">
         <input class="form-control col-md-4" type="text" ng-model="search" placeholder="Search" ng-change="figureOutItemsToDisplay()" />
       </div>
+      <div class="col-md-4" style="margin-top: 2em">
+        <input class="form-control col-md-4" type="search" ng-model="searchID" placeholder="Search by Vehicle Number" ng-change="figureOutItemsToDisplayID()" />
+      </div>
     </div>
   </div>
   <div class="list-group">
     <a ng-repeat="user in pagedItems" ui-sref="admin.user({userId: user._id})" class="list-group-item">
-      <h4 class="list-group-item-heading" ng-bind="user.displayName"></h4>
+      <h3 class="list-group-item-heading" ng-bind="user.displayName"></h3> 
+      
+      <div class="list-group-item-text large"><span ng-if="user.registrationNumber">ID: </span>{{user.registrationNumber}}</div>
       <p class="list-group-item-text pull-right small" ng-bind="user.roles"></p>
       <p class="list-group-item-text" ng-bind="user.email"></p>
     </a>

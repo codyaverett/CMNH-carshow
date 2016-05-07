@@ -3,7 +3,7 @@
     <div class="container">
 
       <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-12 col-md-offset-0">
 
           <div class="section-title center">
             <h2>
@@ -14,35 +14,143 @@
             </div>
             <div class="clearfix"></div>
           </div>
-
-            Current Registered Count: {{ user }}
             
             </hr>
 
             <!--Foreach populate the classes -->
-            <h4>Mother's Only</h4>
-            <h4>Cars Stock 1900-1971</h4>
-            <h4>Cars Stock 1972-Present</h4>
-            <h4>Cars Modified 1900-1971</h4>
-            <h4>Cars Modified 1972-Present</h4>
-            <h4>Cars Custom (All Years)</h4>
-            <h4>Truck Stock 1900-1971</h4>
-            <h4>Truck Stock 1972-Present</h4>
-            <h4>Truck Modified 1900-1971</h4>
-            <h4>Truck Modified 1972-Present</h4>
-            <h4>4x4's</h4>
-            <h4>Foreign Cars (All Years)</h4>
-            <h4>Mustang</h4>
-            <h4>Camaro</h4>
-            <h4>Corvette</h4>
-            <h4>Mopar Muscle</h4>
-            <h4>Street Rod</h4>
-            <h4>Tri-Fives</h4>
-            <h4>Rat Rods</h4>
-            <h4>Motorcycle Sport Bike</h4>
-            <h4>Motorcycle Touring</h4>
-            <h4>Motorcycle Custom</h4>
-                   
+            
+            <div ng-repeat="obj in judgeClassStructure">
+              
+              <hr>
+              
+              <div class="container">
+                
+                <h3>{{obj.class}}</h3>
+                
+                <div class="row">
+                  
+                  <div class=" panel panel-primary col-md-3" style="margin: 5px; align: center" ng-repeat="entry in obj.entries track by $index" ng-show="entry.displayName">
+                    <div class="panel-body ">
+                      Name: {{ entry.displayName }}</br>
+                      Vehicle Number: {{entry.registrationNumber}}</br>
+                      {{ entry.year }}/{{entry.make}}/{{entry.model}}</br>
+                      Total Points: {{ entry.totalPoints }}</br>
+                      People's Choice {{ entry.peopleschoice }}</br>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+              
+            </div>
+            
+              <hr>
+              
+              <div class="container">
+                
+                <h3>People’s Choice – Car/Truck</h3>
+                
+                <div class="row">
+                  
+                  <div class=" panel panel-primary col-md-3" style="margin: 5px; align: center">
+                    <div class="panel-body ">
+                      Name: {{ misc.bestCarTruckPeople.displayName }}</br>
+                      Vehicle Number: {{ misc.bestCarTruckPeople.registrationNumber}}</br>
+                      {{ misc.bestCarTruckPeople.year }}/{{misc.bestCarTruckPeople.make}}/{{misc.bestCarTruckPeople.model}}</br>
+                      Total Points: {{ misc.bestCarTruckPeople.totalPoints }}</br>
+                      People's Choice: {{ misc.bestCarTruckPeople.peopleschoice }}</br>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+              
+<hr>
+              
+              <div class="container">
+                
+                <h3>People’s Choice – Motorcycle</h3>
+                
+                <div class="row">
+                  
+                  <div class=" panel panel-primary col-md-3" style="margin: 5px; align: center">
+                    <div class="panel-body ">
+                      Name: {{ misc.bestMotorcyclePeople.displayName }}</br>
+                      Vehicle Number: {{ misc.bestMotorcyclePeople.registrationNumber}}</br>
+                      {{ misc.bestMotorcyclePeople.year }}/{{misc.bestMotorcyclePeople.make}}/{{misc.bestMotorcyclePeople.model}}</br>
+                      Total Points: {{ misc.bestMotorcyclePeople.totalPoints }}</br>
+                      People's Choice: {{ misc.bestMotorcyclePeople.peopleschoice }}</br>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+              </div>              
+              
+<hr>
+              
+              <div class="container">
+                
+                <h3>Best Club Participation!!!</h3>
+                
+                <div class="row">
+                  
+                  <div class=" panel panel-primary col-md-3" style="margin: 5px; align: center">
+                    <div class="panel-body ">
+                        *** Need to Analyze, because text could be different for pre-registrations
+                    </div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+              
+<hr>
+              
+              <div class="container">
+                
+                <h3>Best of Show – Motorcycle</h3>
+                
+                <div class="row">
+                  
+                  <div class=" panel panel-primary col-md-3" style="margin: 5px; align: center">
+                    <div class="panel-body ">
+                      Name: {{ misc.bestMotorcycle.displayName }}</br>
+                      Vehicle Number: {{ misc.bestMotorcycle.registrationNumber}}</br>
+                      {{ misc.bestMotorcycle.year }}/{{misc.bestMotorcyclePeople.make}}/{{misc.bestMotorcycle.model}}</br>
+                      Total Points: {{ misc.bestMotorcycle.totalPoints }}</br>
+                      People's Choice: {{ misc.bestMotorcycle.peopleschoice }}</br>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+              
+<hr>
+              
+              <div class="container">
+                
+                <h3>Best of Show – Car/Truck</h3>
+                
+                <div class="row">
+                  
+                  <div class=" panel panel-primary col-md-3" style="margin: 5px; align: center">
+                    <div class="panel-body ">
+                      Name: {{ misc.bestCarTruck.displayName }}</br>
+                      Vehicle Number: {{ misc.bestCarTruck.registrationNumber}}</br>
+                      {{ misc.bestCarTruck.year }}/{{misc.bestCarTruck.make}}/{{misc.bestCarTruck.model}}</br>
+                      Total Points: {{ misc.bestCarTruck.totalPoints }}</br>
+                      People's Choice: {{ misc.bestCarTruck.peopleschoice }}</br>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+              </div>                                  
+                                               
         </div>
       </div>
     </div>

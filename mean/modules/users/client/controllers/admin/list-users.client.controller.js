@@ -24,6 +24,18 @@ angular.module('users.admin').controller('UserListController', ['$scope', '$filt
       $scope.pagedItems = $scope.filteredItems.slice(begin, end);
     };
 
+    $scope.figureOutItemsToDisplayID = function () {
+      //console.log($scope.users);
+      $scope.filteredItems = $filter('filter')($scope.users, {
+        registrationNumber: $scope.searchID
+      });
+      $scope.filterLength = $scope.filteredItems.length;
+      var begin = (($scope.currentPage - 1) * $scope.itemsPerPage);
+      var end = begin + $scope.itemsPerPage;
+      $scope.pagedItems = $scope.filteredItems.slice(begin, end);
+    };
+
+
     $scope.pageChanged = function () {
       $scope.figureOutItemsToDisplay();
     };

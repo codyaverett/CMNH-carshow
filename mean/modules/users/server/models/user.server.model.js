@@ -135,6 +135,9 @@ var UserSchema = new Schema({
      type: String, 
     // required: 'Please choose a Vehicle Class'  
   },
+  classID: {
+    type: Number
+  },
   judgepaint: {
     type: [{
       type: Number
@@ -165,10 +168,55 @@ var UserSchema = new Schema({
       type: Number
     }]
   },
-  judgeaudiosecurity: {
+  judgelamps: {
     type: [{
       type: Number
     }]
+  },
+  judgesaftey: {
+    type: [{
+      type: Number
+    }]
+  },
+  bjudgeoriginality: {
+    type: [{
+      type: Number
+    }]
+  },
+  bjudgewheels: {
+    type: [{
+      type: Number  
+    }]
+  },
+  bjudgepaint: {
+    type: [{
+      type: Number
+    }]
+  },
+  bjudgeplating: {
+    type: [{
+      type: Number
+    }]      
+  },
+  bjudgeelectrical: {
+    type: [{
+      type: Number
+    }]    
+  },
+  bjudgecontrols: {
+    type: [{
+      type: Number
+    }]    
+  },
+  bjudgecleanliness: {
+    type: [{
+      type: Number
+    }]    
+  },
+  bjudgetransmission: {
+    type: [{
+      type: Number
+    }]    
   },
   peoplechoice: {
     type: Number
