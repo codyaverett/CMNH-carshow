@@ -7,9 +7,7 @@ angular.module('users.admin').controller('UserController', ['$scope', '$state', 
     
     $scope.judgeCount = [0,1,2];
     //$scope.vehicles = VehiclesService.query(); //get vehicle data//This was used for showing Vehicle data on the user screens
-
-    //console.log($scope.user); I hate this project, so much.  Scrapping it for next year
-
+    
     $scope.remove = function (user) {
       if (confirm('Are you sure you want to delete this user?')) {
         if (user) {
