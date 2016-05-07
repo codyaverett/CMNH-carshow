@@ -15,7 +15,7 @@ angular.module('users.admin').controller('ReportsController', ['$scope', '$filte
             $scope.users = data;
             
             $scope.users.forEach(function(current){
-                console.log(current.registrationNumber + current.displayName);            
+                console.log(current.registrationNumber + ":" + current.displayName);            
             });
             
             for(var i = 0; i <= 22; i++){
