@@ -14,6 +14,16 @@ angular.module('users.admin').controller('ReportsController', ['$scope', '$filte
         Admin.query(function (data) {
             $scope.users = data;
             
+            $scope.users.forEach(function(current){
+                console.log(current.registrationNumber);
+                console.log(current.year);
+                console.log(current.make);
+                console.log(current.model);
+                console.log(current.class);                
+                console.log($scope.getTotalPoints(current));
+                console.log("===================")
+            });
+            
             for(var i = 0; i <= 22; i++){
                 $scope.judgeClassStructure.push({
                     class: Classes.strings[i],
