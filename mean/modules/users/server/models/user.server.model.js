@@ -74,7 +74,7 @@ var UserSchema = new Schema({
   phoneNumber: {
     type: String,
     validate: {
-      validator: function(v) {
+      validator: function(v) { 
         return /\d{9}/.test(v);
       },
       message: '{VALUE} is not a valid phone number!'
@@ -225,8 +225,8 @@ var UserSchema = new Schema({
       type: Boolean
   },
   registrationNumber: {
-    type: Number,
-    unique: 'testing error message'
+    type: Number
+    //unique: 'testing error message'
   },
   preRegistered: {
     type: Boolean
