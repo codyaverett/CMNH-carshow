@@ -6,12 +6,13 @@ angular.module('users').factory('Authentication', ['$window',
     var auth = {
       user: $window.user,
       isDataEntry: function() { 
-         console.log('is data entry');       
-         if($window.user.roles) {
+        return true;
+         //console.log('is data entry');       
+         /*if($window.user.roles) {
             if ($window.user.roles.find(function(e, i){
               if (e === "admin") {return true;}
             })); return true;
-         } return false; 
+         } return false; */
       },
       generateUsername: function() {
         var text = "";
